@@ -33,7 +33,7 @@ const Register = (props: any) => {
               type="tel"
               id="username"
               name="username"
-              placeholder="mobile, username, email"
+              // placeholder="mobile, username, email"
               className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
@@ -48,7 +48,7 @@ const Register = (props: any) => {
               type={"password"}
               id="password"
               name="password"
-              placeholder="enter your password"
+              // placeholder="enter your password"
               className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 pr-10"
             />
           </div>
@@ -63,7 +63,7 @@ const Register = (props: any) => {
               type={showPassword ? "text" : "password"}
               id="password"
               name="password"
-              placeholder="enter your password"
+              // placeholder="enter your password"
               className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 pr-10"
             />
             <button

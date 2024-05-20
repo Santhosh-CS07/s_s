@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Login = (props: any) => {
   const { setCreateAccount, setForgetPassword, setLogin } = props;
@@ -25,11 +25,11 @@ const Login = (props: any) => {
 
   const loginUser: any = (e: any) => {
     e.preventDefault();
-    const staticUsername: string = "user";
-    const staticPassword: string = "user123";
+    const staticUsername: string = "123";
+    const staticPassword: string = "123";
 
     if (username === staticUsername && password === staticPassword) {
-      //  router.push('/dashboard');
+      window.location.href = "/dashboard";
     } else {
       alert("Invalid username or password");
       setUsername("");
@@ -52,7 +52,7 @@ const Login = (props: any) => {
               type="tel"
               id="username"
               name="username"
-              placeholder="mobile, username, email"
+              // placeholder="mobile, username, email"
               onChange={(e) => setUsername(e.target.value)}
               className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
             />
@@ -69,7 +69,7 @@ const Login = (props: any) => {
               id="password"
               name="password"
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="enter your password"
+              // placeholder="enter your password"
               className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 pr-10"
             />
             <button
