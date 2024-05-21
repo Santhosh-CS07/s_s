@@ -12,6 +12,17 @@ const Authentication = () => {
 
   return (
     <div>
+      <div className="flex justify-between">
+        {" "}
+        <h1 className="text-4xl py-2 ms-16">s_S</h1>
+        <p className="pt-4 me-6">
+          ** A way to connect Human Hands - we call it{" "}
+          <em>
+            <strong>Humman Media Platform </strong>
+          </em>
+          **
+        </p>
+      </div>
       {login ? (
         <Login
           setForgetPassword={setForgetPassword}

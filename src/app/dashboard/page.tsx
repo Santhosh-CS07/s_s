@@ -1,26 +1,27 @@
-import Analysis from "@/components/Analysis/Analysis";
-import Authentication from "@/components/Authentication/Authentication";
-import Contentpage from "@/components/ContentPage/Contentpage";
+"use client";
+import Dashboardmainpage from "@/components/DashboardMainPage/Dashboardmainpage";
+import Getsupport from "@/components/GetSupport/Getsupport";
+import Givesupport from "@/components/GiveSupport/Givesupport";
 import Navbar from "@/components/Navbar/Navbar";
-import Userprofile from "@/components/UserProfile/Userprofile";
-import React from "react";
+import React, { useState } from "react";
 
 const Dashboard = () => {
+  const [getSupport, setGetSupport] = useState(false);
+  const [giveSupport, setGiveSupport] = useState(false);
+  const [mainpage, setMainPage] = useState(true);
   return (
     <div>
       <div className="fixed top-0 w-full z-50">
-        <Navbar />
+        <Navbar
+          setGetSupport={setGetSupport}
+          setGiveSupport={setGiveSupport}
+          setMainPage={setMainPage}
+        />
       </div>
-      <div className="pt-16 flex justify-center my-6">
-        <div className="hidden md:block fixed left-20 top-20">
-          <Userprofile />
-        </div>
-        <div className="hidden md:block fixed right-20 top-20">
-          <Analysis />
-        </div>
-        <div className="ml-20 mr-20">
-          <Contentpage />
-        </div>
+      {mainpage ? <Dashboardmainpage /> : ""}
+      <div className="pt-60 text-center text-4xl text-gray-400">
+        {getSupport ? <Getsupport /> : ""}
+        {giveSupport ? <Givesupport /> : ""}
       </div>
     </div>
   );
