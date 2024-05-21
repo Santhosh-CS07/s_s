@@ -18,7 +18,7 @@ const Authentication = () => {
         <p className="pt-4 me-6">
           ** A way to connect Human Hands - we call it{" "}
           <em>
-            <strong>Humman Media Platform </strong>
+            <strong>Human Media Platform </strong>
           </em>
           **
         </p>

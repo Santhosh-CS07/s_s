@@ -36,8 +36,8 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaInfoCircle className="text-green-500 text-2xl me-2" />
-            <span className="text-sm sm:inline">Get Support</span>
+            <FaInfoCircle className="text-green-500 text-4xl me-2" />
+            <span className=" sm:inline">Get Support</span>
           </button>
           <button
             onClick={() => {
@@ -47,8 +47,8 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaHome className="text-gray-500 text-2xl me-2" />
-            <span className="text-sm sm:inline">Home</span>
+            <FaHome className="text-gray-500 text-4xl me-2" />
+            <span className="sm:inline">Home</span>
           </button>
           <button
             onClick={() => {
@@ -58,8 +58,8 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaHandsHelping className="text-green-500 text-2xl me-2" />
-            <span className=" text-sm sm:inline">Give Support</span>
+            <FaHandsHelping className="text-green-500 text-4xl me-2" />
+            <span className=" sm:inline">Give Support</span>
           </button>
         </div>
       </div>

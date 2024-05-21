@@ -9,12 +9,8 @@ const Contentpage = () => {
       {/* </div> */}
       <div className="grid gap-4">
         <ContentCard
-          title="Difficulty Understanding Algorithms"
+          title=""
           content="Offer extra practice problems, seek help from professors or online resources, and join study groups to discuss and understand algorithms better."
-        />
-        <ContentCard
-          title="Difficulty Managing Time Effectively"
-          content="Use time management tools, create a study schedule, prioritize tasks, and eliminate distractions to manage time effectively."
         />
         <ContentCard
           title="Struggling with Complex Programming Concepts"

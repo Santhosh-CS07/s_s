@@ -36,6 +36,12 @@ const Login = (props: any) => {
       setPassword("");
     }
   };
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      loginUser(e);
+    }
+  };
+
   return (
     <div className="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex justify-center items-center">
       <div className="bg-white p-8 rounded-lg shadow-md w-100">
@@ -52,6 +58,7 @@ const Login = (props: any) => {
               type="tel"
               id="username"
               name="username"
+              onKeyDown={handleKeyDown}
               // placeholder="mobile, username, email"
               onChange={(e) => setUsername(e.target.value)}
               className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
@@ -68,6 +75,7 @@ const Login = (props: any) => {
               type={showPassword ? "text" : "password"}
               id="password"
               name="password"
+              onKeyDown={handleKeyDown}
               onChange={(e) => setPassword(e.target.value)}
               // placeholder="enter your password"
               className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 pr-10"
