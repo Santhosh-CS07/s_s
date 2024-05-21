@@ -30,17 +30,6 @@ const Navbar = (props: any) => {
         <div className="flex flex-row sm:flex-row space-x-4 mt-4 sm:mt-0">
           <button
             onClick={() => {
-              setMainPage(true);
-              setGiveSupport(false);
-              setGetSupport(false);
-            }}
-            className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
-          >
-            <FaHome className="text-gray-500 text-2xl me-2" />
-            <span className="hidden sm:inline">Home</span>
-          </button>
-          <button
-            onClick={() => {
               setGetSupport(true);
               setMainPage(false);
               setGiveSupport(false);
@@ -48,7 +37,18 @@ const Navbar = (props: any) => {
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <FaInfoCircle className="text-green-500 text-2xl me-2" />
-            <span className="hidden sm:inline">Get Support</span>
+            <span className="text-sm sm:inline">Get Support</span>
+          </button>
+          <button
+            onClick={() => {
+              setMainPage(true);
+              setGiveSupport(false);
+              setGetSupport(false);
+            }}
+            className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
+          >
+            <FaHome className="text-gray-500 text-2xl me-2" />
+            <span className="text-sm sm:inline">Home</span>
           </button>
           <button
             onClick={() => {
@@ -59,7 +59,7 @@ const Navbar = (props: any) => {
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <FaHandsHelping className="text-green-500 text-2xl me-2" />
-            <span className="hidden sm:inline">Give Support</span>
+            <span className=" text-sm sm:inline">Give Support</span>
           </button>
         </div>
       </div>

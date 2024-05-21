@@ -4,7 +4,7 @@ import { FaPaperPlane } from "react-icons/fa";
 
 const QuestionInput = () => {
   return (
-    <div className="w-full max-w-md mx-auto">
+    <div className="w-full max-w-md mx-auto md: mt-10 sm:mt-0">
       <div className="flex bg-white shadow-md rounded-lg p-2">
         <input
           type="text"
