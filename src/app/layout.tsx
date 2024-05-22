@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "s_s is a real time connection.",
+  title: "Connect and Succeed: Real-Time Solutions at right time.",
   description:
-    "we are here to connect you in real time to ask questions and solve your real problems.",
+    "Join a community of 1 billion members to manage your professional identity and network. Connect in real time with live chat and calls to find quick solutions to any problem. Access knowledge, insights, and opportunities to help you succeed.",
 };
 
 export default function RootLayout({
