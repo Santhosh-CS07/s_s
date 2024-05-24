@@ -13,15 +13,15 @@ export default function HeroSection() {
             <div className="container mx-auto px-6 py-6">
                 <Homenavbar />
                 <div className="flex flex-col md:flex-row ">
-                    <div className="flex justify-items-center pt-24 md:w-1/2 text-left">
+                    <div className="flex justify-items-center pt-12 sm:pt-24 md:w-1/2 text-left">
                         <div className=''>
                             <h1 className="text-4xl md:text-4xl font-bold text-white mb-6">
-                                Join Ekathrass for Real-Time Support from Real People
+                                Join Ekathra for Real-Time Solutions from Real People
                             </h1>
                             <p className="text-lg md:text-xl text-white mb-8 overflow-wrap">
                                 Get the help you need, when you need it most.
                             </p>
-                            <div className="flex space-x-6">
+                            <div className=" space-x-6 sm:flex">
                                 <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md">
                                     <FiMessageSquare className="h-8 w-8 text-gray-600 rounded-lg p-1" />
                                     <span className="text-gray-600">Live Chat</span>
