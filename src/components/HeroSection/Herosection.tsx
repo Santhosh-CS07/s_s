@@ -23,19 +23,19 @@ export default function HeroSection() {
                             </p>
                             <div className=" space-x-6 sm:flex">
                                 <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md">
-                                    <FiMessageSquare className="h-8 w-8 text-gray-600 rounded-lg p-1" />
+                                    <FiMessageSquare className="h-6 w-6 text-gray-600 rounded-lg p-1" />
                                     <span className="text-gray-600">Live Chat</span>
                                 </div>
                                 <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md">
-                                    <FiPhoneCall className="h-8 w-8 text-gray-600   rounded-lg p-1" />
+                                    <FiPhoneCall className="h-6 w-6text-gray-600   rounded-lg p-1" />
                                     <span className="text-gray-600">Live Internet Call</span>
                                 </div>
                                 <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md">
-                                    <FiVideo className="h-8 w-8  text-gray-600 rounded-lg p-1" />
+                                    <FiVideo className="h-6 w-6  text-gray-600 rounded-lg p-1" />
                                     <span className="text-gray-600">Live Video Call</span>
                                 </div>
                                 <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md">
-                                    <InformationCircleIcon className="h-8 w-8 text-gray-600  rounded-lg p-1" />
+                                    <InformationCircleIcon className="h-6 w-6 text-gray-600  rounded-lg p-1" />
                                     <span className="text-gray-600">Fully Secured</span>
                                 </div>
                             </div>
