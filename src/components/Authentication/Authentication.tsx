@@ -12,9 +12,11 @@ const Authentication = () => {
 
   return (
     <div>
-      <div className="block sm:flex text-center justify-between pb-2">
+      {/* <div className="block sm:flex text-center justify-between pb-2">
         {" "}
-        <h1 className="text-4xl py-2 sm:ms-16">s_S</h1>
+        <h2 className="pt-4 pl-4 text-2xl font-bold text-gray-800 uppercase tracking-wider bg-gradient-to-r from-blue-500 to-yellow-500 bg-clip-text text-transparent">
+          ekathrass
+        </h2>
         <p className="pt-4 me-6">
           ** A way to connect Human Hands - we call it{" "}
           <em>
@@ -22,7 +24,7 @@ const Authentication = () => {
           </em>
           **
         </p>
-      </div>
+      </div> */}
       {login ? (
         <Login
           setForgetPassword={setForgetPassword}

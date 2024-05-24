@@ -8,7 +8,10 @@ const Navbar = (props: any) => {
       <div className="container mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between">
         {/* Brand Logo */}
         <div className="flex items-center">
-          <h3 className="text-2xl">s_S</h3>
+          <h2 className="text-2xl font-bold text-gray-800 uppercase tracking-wider bg-gradient-to-r from-blue-500 to-yellow-500 bg-clip-text text-transparent">
+            ekathrass
+          </h2>
+
           {/* <img src="/path-to-your-logo.png" alt="Brand Logo" className="h-10" /> */}
         </div>
 
