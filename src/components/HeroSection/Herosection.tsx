@@ -16,37 +16,33 @@ export default function HeroSection() {
                     <div className="flex justify-items-center pt-12 sm:pt-24 md:w-1/2 text-left">
                         <div className=''>
                             <h1 className="text-4xl md:text-4xl font-bold text-white mb-6">
-                                Join Ekathra for Real-Time Solutions from Real People
-                            </h1>
+                                Join Ekathra <strong className='line-through'>COMMUNITY</strong> for Real-Time Help at Your Fingertips.</h1>
                             <p className="text-lg md:text-xl text-white mb-8 overflow-wrap">
-                                Get the help you need, when you need it most.
+                                Ekathra - Where Every Question Gets the Answer It Deserves.
                             </p>
-                            <div className=" space-x-6 sm:flex">
-                                <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md">
-                                    <FiMessageSquare className="h-6 w-6 text-gray-600 rounded-lg p-1" />
-                                    <span className="text-gray-600">Live Chat</span>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-light-blue-500">
+                                    <FiMessageSquare className="h-10 w-10 text-white rounded-lg p-1" />
+                                    <span className="text-white">Live Chat</span>
                                 </div>
-                                <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md">
-                                    <FiPhoneCall className="h-6 w-6text-gray-600   rounded-lg p-1" />
-                                    <span className="text-gray-600">Live Internet Call</span>
+                                <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-light-blue-500">
+                                    <FiPhoneCall className="h-10 w-10 text-white rounded-lg p-1" />
+                                    <span className="text-white">Internet Call</span>
                                 </div>
-                                <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md">
-                                    <FiVideo className="h-6 w-6  text-gray-600 rounded-lg p-1" />
-                                    <span className="text-gray-600">Live Video Call</span>
+                                <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-light-blue-500">
+                                    <FiVideo className="h-10 w-10 text-white rounded-lg p-1" />
+                                    <span className="text-white">Video Call</span>
                                 </div>
-                                <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md">
-                                    <InformationCircleIcon className="h-6 w-6 text-gray-600  rounded-lg p-1" />
-                                    <span className="text-gray-600">Fully Secured</span>
+                                <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-light-blue-500">
+                                    <InformationCircleIcon className="h-10 w-10 text-white rounded-lg p-1" />
+                                    <span className="text-white">Fully Secured</span>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                     <div className="md:w-1/2 flex justify-center mt-12">
                         <Authentication />
                     </div>
-
                 </div>
             </div>
         </div>
