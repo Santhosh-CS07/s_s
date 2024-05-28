@@ -1,12 +1,17 @@
+"use client";
 import React from 'react'
-import { ArrowRightOnRectangleIcon, NewspaperIcon, InformationCircleIcon, UserPlusIcon } from '@heroicons/react/24/outline';
+import { ArrowRightOnRectangleIcon, HomeIcon, NewspaperIcon, InformationCircleIcon, UserPlusIcon } from '@heroicons/react/24/outline';
 import { FaRegSmile } from 'react-icons/fa'; // Import the smile icon from react-icons
 import Image from 'next/image';
 const Homenavbar = () => {
     return (
-        <div className=" justify-between items-center sm:flex">
-            <h2 className="font-serif text-7xl md:text-5xl text-white font-extrabold sm:text-4xl">Ekathra</h2>
+        <div className=" justify-between items-center sm:flex mx-16 mt-6">
+            <a href='/'> <h2 className="font-serif text-7xl md:text-5xl text-white font-extrabold sm:text-4xl">Ekathra</h2></a>
             <div className="flex space-x-6 sm:mt-0">
+                <a href="/" className="text-white hover:text-gray-200 flex items-center space-x-2">
+                    <span className='hidden sm:inline'>Home</span>
+                    <HomeIcon className="h-16 w-16 hidden sm:inline sm:h-6 sm:w-6" />
+                </a>
                 <a href="/people" className="text-white hover:text-gray-200 flex items-center space-x-2">
                     <span className='hidden sm:inline'>People</span>
                     <UserPlusIcon className="h-16 w-16 hidden sm:inline sm:h-6 sm:w-6" />

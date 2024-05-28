@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Homenavbar from "@/components/HomeNavBar/Homenavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-gradient-to-r from-green-400 to-blue-500`}>
+        <Homenavbar />
+        {children}
+      </body>
     </html>
   );
 }
