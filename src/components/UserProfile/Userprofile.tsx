@@ -3,6 +3,7 @@ import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const UserProfile = () => {
+  const name: string = "Santhosh M";
   const position = "Software Developer";
   const location = "San Francisco, CA";
   const lastLogin = "2024-05-20 12:34:56"; // Assuming a UTC timestamp
@@ -15,7 +16,8 @@ const UserProfile = () => {
 
   return (
     <div className="bg-white p-4 shadow-md rounded-lg">
-      <h2 className="text-xl font-bold mb-2">{position}</h2>
+      <h2 className="text-xl font-bold mb-2">{name}</h2>
+      <p className="text-gray-600 mb-2">{position}</p>
       <p className="text-gray-600 mb-2">{location}</p>
       <p className="text-gray-600 mb-2">Last Login: {lastLogin}</p>
       <div className="flex flex-wrap gap-2 mb-4">

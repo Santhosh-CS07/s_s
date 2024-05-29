@@ -5,7 +5,7 @@ import UserProfile from "../UserProfile/Userprofile";
 
 const Dashboardmainpage = () => {
   return (
-    <div className="pt-16 flex justify-center mt-6">
+    <div className=" flex justify-center">
       <div className="hidden md:block fixed left-20 top-20">
         <UserProfile />
       </div>

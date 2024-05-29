@@ -7,7 +7,7 @@ const Card = (props: any) => {
   const isEmpty = !title || !content;
 
   return (
-    <div className="w-full max-w-md w-full bg-white shadow-lg rounded-lg overflow-hidden my-6">
+    <div className="w-full max-w-md w-full bg-white shadow-lg rounded-lg overflow-hidden my-2">
       {isEmpty ? (
         <div className="flex items-center justify-center h-48 bg-gray-100">
           <FaPlus className="text-gray-400" size={48} />

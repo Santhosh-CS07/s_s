@@ -8,8 +8,8 @@ const Navbar = (props: any) => {
       <div className="container mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between">
         {/* Brand Logo */}
         <div className="flex items-center">
-          <h2 className="text-2xl font-bold text-gray-800 uppercase tracking-wider bg-gradient-to-r from-blue-500 to-yellow-500 bg-clip-text text-transparent">
-            ekathrass
+          <h2 className="text-4xl font-bold text-gray-800 uppercase tracking-wider bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
+            ekathra
           </h2>
 
           {/* <img src="/path-to-your-logo.png" alt="Brand Logo" className="h-10" /> */}
@@ -39,8 +39,8 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaInfoCircle className="text-green-500 text-4xl me-2" />
-            <span className=" sm:inline">Get Support</span>
+            <FaInfoCircle className="text-blue-500 text-4xl me-2" />
+            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent font-bold text-lg sm:inline">Get Support</span>
           </button>
           <button
             onClick={() => {
@@ -50,8 +50,8 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaHome className="text-gray-500 text-4xl me-2" />
-            <span className="sm:inline">Home</span>
+            <FaHome className="text-blue-500 text-4xl me-2" />
+            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent font-bold text-lg sm:inline">Home</span>
           </button>
           <button
             onClick={() => {
@@ -61,8 +61,11 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaHandsHelping className="text-green-500 text-4xl me-2" />
-            <span className=" sm:inline">Give Support</span>
+            <FaHandsHelping className="text-blue-500 text-4xl me-2" />
+            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent font-bold text-lg sm:inline">
+              Give Support
+            </span>
+
           </button>
         </div>
       </div>

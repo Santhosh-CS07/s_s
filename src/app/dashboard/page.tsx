@@ -2,7 +2,7 @@
 import Dashboardmainpage from "@/components/DashboardMainPage/Dashboardmainpage";
 import Getsupport from "@/components/GetSupport/Getsupport";
 import Givesupport from "@/components/GiveSupport/Givesupport";
-import Navbar from "@/components/Navbar/Navbar";
+import Navbar from "@/components/DashboardNavbar/Navbar";
 import React, { useState } from "react";
 
 const Dashboard = () => {
