@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaPaperPlane } from "react-icons/fa";
+import { FaPaperPlane, FaPen } from "react-icons/fa";
 
 const QuestionInput = () => {
   return (
@@ -9,10 +9,10 @@ const QuestionInput = () => {
         <input
           type="text"
           placeholder="Ask anything...?"
-          className="flex-grow px-4 py-2 text-gray-700 bg-gray-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white"
+          className="flex-grow px-4 py-2 me-2 text-gray-700 bg-gray-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white"
         />
         <button className="px-4 py-2 bg-green-500 text-white rounded-r-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-          <FaPaperPlane />
+          post
         </button>
       </div>
     </div>

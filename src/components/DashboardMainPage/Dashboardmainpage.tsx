@@ -4,16 +4,28 @@ import Analysis from "../Analysis/Analysis";
 import UserProfile from "../UserProfile/Userprofile";
 
 const Dashboardmainpage = () => {
+  const handleLogout = () => {
+    alert("Logout clicked");
+  };
   return (
-    <div className=" flex justify-center">
-      <div className="hidden md:block fixed left-20 top-20">
-        <UserProfile />
-      </div>
-      <div className="hidden md:block fixed right-20 top-20">
-        <Analysis />
+    <div className=" flex justify-evenly	">
+      <div className="hidden md:block">
+        <UserProfile
+          name="santhosh naik"
+          position="Software Engineer"
+          location="New York, USA"
+          lastLogin="2024-05-29"
+          experience="3"
+          interests={["Coding", "HTML", "Computer Networks", "java", "spring", "sql"]}
+          isVerified={true}
+          handleLogout={handleLogout}
+        />
       </div>
       <div>
         <Contentpage />
+      </div>
+      <div className="hidden md:block">
+        <Analysis />
       </div>
     </div>
   );

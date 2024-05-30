@@ -2,7 +2,9 @@
 import React from "react";
 
 const Getsupport = () => {
-  return <div>Coming soon ....</div>;
+  return <div>
+
+  </div>;
 };
 
 export default Getsupport;

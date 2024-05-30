@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSearch, FaHome, FaHandsHelping, FaInfoCircle } from "react-icons/fa";
+import { FaSearch, FaHome, FaHandsHelping, FaInfoCircle, FaBell } from "react-icons/fa";
 
 const Navbar = (props: any) => {
   const { setGiveSupport, setGetSupport, setMainPage } = props;
@@ -30,7 +30,7 @@ const Navbar = (props: any) => {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-row sm:flex-row space-x-4 mt-4 sm:mt-0">
+        <div className="flex flex-row sm:flex-row space-x-2 mt-4 sm:mt-0">
           <button
             onClick={() => {
               setGetSupport(true);
@@ -39,8 +39,8 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaInfoCircle className="text-blue-500 text-4xl me-2" />
-            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent font-bold text-lg sm:inline">Get Support</span>
+            <FaInfoCircle className="text-blue-500 hidden sm:inline text-3xl me-2" />
+            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent font-bold text-lg sm:inline">Live</span>
           </button>
           <button
             onClick={() => {
@@ -50,8 +50,8 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaHome className="text-blue-500 text-4xl me-2" />
-            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent font-bold text-lg sm:inline">Home</span>
+            <FaHome className="text-blue-500 hidden sm:inline text-3xl me-2" />
+            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent font-bold text-lg sm:inline">Feed</span>
           </button>
           <button
             onClick={() => {
@@ -61,11 +61,19 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaHandsHelping className="text-blue-500 text-4xl me-2" />
+            <FaHandsHelping className="text-blue-500 hidden sm:inline text-3xl me-2" />
             <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent font-bold text-lg sm:inline">
-              Give Support
+              Business
             </span>
 
+          </button>
+          <button
+            className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
+          >
+            <FaBell className="text-blue-500 text-2xl" />
+            <span className="absolute top-20 right-3 sm:top-2 sm:right-14 flex items-center justify-center h-5 w-5 text-xs font-bold text-white bg-red-600 rounded-full">
+              2
+            </span>
           </button>
         </div>
       </div>
