@@ -19,8 +19,12 @@ const Dashboard = () => {
         />
       </div>
       {mainpage ? <Dashboardmainpage /> : ""}
-      <div className="pt-60 text-center text-4xl text-gray-400">
-        {getSupport ? <Getsupport /> : ""}
+      <div className="mx-6">
+        {getSupport ? (
+          <Getsupport getSupport={getSupport} setGetSupport={setGetSupport} />
+        ) : (
+          ""
+        )}
         {giveSupport ? <Givesupport /> : ""}
       </div>
     </div>

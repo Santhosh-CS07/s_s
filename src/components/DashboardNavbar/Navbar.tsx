@@ -1,8 +1,16 @@
 import React from "react";
-import { FaSearch, FaHome, FaHandsHelping, FaInfoCircle, FaBell } from "react-icons/fa";
+import {
+  FaSearch,
+  FaHome,
+  FaHandsHelping,
+  FaInfoCircle,
+  FaBell,
+  FaRocketchat,
+} from "react-icons/fa";
 
 const Navbar = (props: any) => {
   const { setGiveSupport, setGetSupport, setMainPage } = props;
+
   return (
     <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between">
@@ -39,8 +47,10 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaInfoCircle className="text-blue-500 hidden sm:inline text-3xl me-2" />
-            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent font-bold text-lg sm:inline">Live</span>
+            <FaInfoCircle className="text-blue-500 hidden sm:inline text-2xl me-2" />
+            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent text-lg sm:inline">
+              Q&A
+            </span>
           </button>
           <button
             onClick={() => {
@@ -50,8 +60,10 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaHome className="text-blue-500 hidden sm:inline text-3xl me-2" />
-            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent font-bold text-lg sm:inline">Feed</span>
+            <FaHome className="text-blue-500 hidden sm:inline text-2xl me-2" />
+            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent text-lg sm:inline">
+              Feed
+            </span>
           </button>
           <button
             onClick={() => {
@@ -61,17 +73,27 @@ const Navbar = (props: any) => {
             }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaHandsHelping className="text-blue-500 hidden sm:inline text-3xl me-2" />
-            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent font-bold text-lg sm:inline">
+            <FaHandsHelping className="text-blue-500 hidden sm:inline text-2xl me-2" />
+            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent text-lg sm:inline">
               Business
             </span>
-
           </button>
           <button
+            onClick={() => {
+              setGiveSupport(false);
+              setMainPage(false);
+              setGetSupport(false);
+            }}
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
+            <FaRocketchat className="text-blue-500 hidden sm:inline text-2xl me-2" />
+            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent text-lg sm:inline">
+              Chat
+            </span>
+          </button>
+          <button className="hidden sm:inline flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150">
             <FaBell className="text-blue-500 text-2xl" />
-            <span className="absolute top-20 right-3 sm:top-2 sm:right-14 flex items-center justify-center h-5 w-5 text-xs font-bold text-white bg-red-600 rounded-full">
+            <span className="absolute top-20 right-3 sm:top-2 sm:right-14 flex items-center justify-center h-5 w-5 text-xs text-white bg-red-600 rounded-full">
               2
             </span>
           </button>

@@ -6,7 +6,7 @@ import Homenavbar from "@/components/HomeNavBar/Homenavbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Support from Real People.",
+  title: "Live Support from Real People at right time.",
   description:
     "we are here to connect you in real time to ask questions and solve your real problems.",
 };
@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gradient-to-r from-green-400 to-blue-500`}>
+      <body
+        className={`${inter.className} bg-gradient-to-r from-green-400 to-blue-500`}
+      >
         <Homenavbar />
         {children}
       </body>
