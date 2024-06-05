@@ -1,7 +1,5 @@
 
 "use client";
-// components/MusicPlayer.js
-// components/MusicPlayer.js
 import React from 'react';
 import Song from '../../components/Song/Song';
 
@@ -13,8 +11,8 @@ const songs = [
 
 const MusicPlayer = () => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
-            <h1 className="text-2xl font-bold mb-4">Music Player</h1>
+        <div className="flex flex-col items-center justify-center bg-gray-900 text-white py-44">
+            <h1 className="text-2xl font-bold mb-4">List items </h1>
             <div className="w-full max-w-md">
                 {songs.map((song, index) => (
                     <Song key={index} title={song.title} src={song.src} />
