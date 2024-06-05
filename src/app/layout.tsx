@@ -19,10 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-gradient-to-r from-green-400 to-blue-500`}
+      // className={`${inter.className} bg-gradient-to-r from-green-400 to-blue-500`}
       >
-        <Homenavbar />
+        {/* <Homenavbar /> */}
         {children}
+        <script src="https://sdk.scdn.co/spotify-player.js"></script>
       </body>
     </html>
   );
