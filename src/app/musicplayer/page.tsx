@@ -7,8 +7,7 @@ import Song from '../../components/Song/Song';
 
 const songs = [
     { title: 'Ammaina Nannaina', src: '/music/Ammaina Nannaina-SenSongsMp3.Co.mp3' },
-    { title: 'Song 2', src: '/music/song2.mp3' },
-    { title: 'Song 3', src: '/music/song3.mp3' },
+    { title: 'Chali Chaliga', src: '/music/Chali Chaliga.mp3' }
     // Add more songs as needed
 ];
 
