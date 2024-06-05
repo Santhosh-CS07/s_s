@@ -23,7 +23,6 @@ export default function RootLayout({
       >
         {/* <Homenavbar /> */}
         {children}
-        <script src="https://sdk.scdn.co/spotify-player.js"></script>
       </body>
     </html>
   );
