@@ -5,7 +5,10 @@ import Song from '../../components/Song/Song';
 
 const songs = [
     { title: 'Ammaina Nannaina', src: '/music/Ammaina Nannaina-SenSongsMp3.Co.mp3' },
-    { title: 'Chali Chaliga', src: '/music/Chali Chaliga.mp3' }
+    { title: 'Chali Chaliga', src: '/music/Chali Chaliga.mp3' },
+    { title: 'sample 1', src: '/music/file_example_OOG_1MG.ogg' },
+    { title: 'sample 2', src: '/music/file_example_WAV_1MG.wav' },
+    { title: 'sample 3', src: '/music/sample1.AAC' }
     // Add more songs as needed
 ];
 

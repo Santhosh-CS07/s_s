@@ -26,10 +26,12 @@ const Song = ({ title, src }: any) => {
 
     const handleDownload = () => {
         const link = document.createElement('a');
+        const fileExtension = src.split('.').pop(); // Extract the file extension from the src
         link.href = src;
-        link.download = `${title}.mp3`;
+        link.download = `${title}.${fileExtension}`; // Use the extracted file extension
         link.click();
     };
+
 
     return (
         <div className="flex items-center justify-between bg-gray-800 text-white p-4 rounded-lg mb-2">
@@ -37,10 +39,10 @@ const Song = ({ title, src }: any) => {
                 <h2 className="text-lg font-bold">{title}</h2>
             </div>
             <div>
-                {/* <audio ref={audioRef} src={src}></audio> */}
-                {/* <button className="p-2 bg-blue-500 rounded-full" onClick={togglePlayPause}>
+                <audio ref={audioRef} src={src}></audio>
+                <button className="p-2 bg-blue-500 rounded-full" onClick={togglePlayPause}>
                     {isPlaying ? <FaPause /> : <FaPlay />}
-                </button> */}
+                </button>
                 <button className="p-2 bg-gray-500 rounded-full ml-2" onClick={handleDownload}>
                     <FaDownload />
                 </button>
