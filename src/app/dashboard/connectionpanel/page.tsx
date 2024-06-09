@@ -2,14 +2,13 @@
 import AIMode from "@/components/AIMode/AIMode";
 import Navbar from "@/components/DashboardNavbar/Navbar";
 import HumanMode from "@/components/HumanMode/HumanMode";
-import QuizMode from "@/components/QuizMode/QuizMode";
 import React, { useState } from "react";
-import { FaUser, FaRobot, FaRegQuestionCircle } from "react-icons/fa";
+import { FaUser, FaRobot } from "react-icons/fa";
 
 const Page = () => {
   const [mode, setMode] = useState("ai");
 
-  const toggleMode = (selectedMode: string) => {
+  const toggleMode = (selectedMode: any) => {
     setMode(selectedMode);
   };
 
@@ -36,28 +35,13 @@ const Page = () => {
             mode === "human"
               ? "bg-blue-500 text-white"
               : "bg-gray-200 text-gray-600"
-          } rounded-md mr-4 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300`}
+          } rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300`}
         >
           <FaUser className="mr-2" />
           Human Mode
         </button>
-        <button
-          onClick={() => toggleMode("quiz")}
-          className={`flex items-center px-4 py-2 ${
-            mode === "quiz"
-              ? "bg-blue-500 text-white"
-              : "bg-gray-200 text-gray-600"
-          } rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300`}
-        >
-          <FaRegQuestionCircle className="mr-2" />
-          Quiz Mode
-        </button>
       </div>
-      <div className="p-4">
-        {mode === "ai" && <AIMode />}
-        {mode === "human" && <HumanMode />}
-        {mode === "quiz" && <QuizMode />}
-      </div>
+      <div className="p-4">{mode === "ai" ? <AIMode /> : <HumanMode />}</div>
     </div>
   );
 };

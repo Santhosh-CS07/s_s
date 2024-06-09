@@ -1,18 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import SupportCard from "../SupportCard/SupportCard";
-import Departmentfilter from "../DepartmentFilter/DepartmentFilter";
-import ConnectionPanel from "../ConnectionPanel/ConnectionPanel";
+import SupportCard from "../../../components/SupportCard/SupportCard";
+import Departmentfilter from "../../../components/DepartmentFilter/DepartmentFilter";
+import Navbar from "@/components/DashboardNavbar/Navbar";
+import ConnectionPanel from "@/components/ConnectionPanel/ConnectionPanel";
 
 const Getsupport = (props: any) => {
   const { setGetSupport, getSupport } = props;
   const [supportCard, setSupportCard] = useState(true);
   const [connectionPanel, setConnectionPanel] = useState(false);
-  console.log(connectionPanel);
 
   const cardsData: any = [
     {
-      title: "Learn Debugging?",
+      title: "Learn Typescript?",
       description:
         "You can ask me anything about debugging - live where I want to share my real experience.",
       rating: 4,
@@ -79,6 +79,10 @@ const Getsupport = (props: any) => {
 
   return (
     <div>
+      <div className="fixed top-0 w-full z-50">
+        <Navbar />
+      </div>
+      {connectionPanel ? <ConnectionPanel /> : ""}
       {supportCard && (
         <>
           <div className="fixed top-14 left-0 right-0 bg-white z-10 shadow">
@@ -107,7 +111,6 @@ const Getsupport = (props: any) => {
           </div>
         </>
       )}
-      {connectionPanel && <ConnectionPanel />}
     </div>
   );
 };

@@ -11,7 +11,6 @@ const SupportCard = (props: any) => {
 
   const openConnectionPanel = () => {
     setSupportCard(false);
-    // setGetSupport(false);
     setConnectionPanel(true);
   };
   return (
@@ -54,7 +53,7 @@ const SupportCard = (props: any) => {
           onClick={openConnectionPanel}
           className="bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-1 px-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 text-sm"
         >
-          Connect Live
+          Ask Live
         </button>
         {data?.isSaved ? (
           <FaBookmark
