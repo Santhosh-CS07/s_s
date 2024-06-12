@@ -43,10 +43,10 @@ const Navbar = (props: any) => {
           >
             <FaInfoCircle className="text-blue-500 hidden sm:inline text-2xl me-2" />
             <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent text-lg sm:inline">
-              Q&A
+              Ask
             </span>
           </a>
-          <a
+          {/* <a
             href="/dashboard"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
@@ -54,7 +54,7 @@ const Navbar = (props: any) => {
             <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent text-lg sm:inline">
               Feed
             </span>
-          </a>
+          </a> */}
           <a
             href="/dashboard/givesupport"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
