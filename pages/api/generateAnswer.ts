@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 // const apiKey = process.env.NEXT_PUBLIC_API_KEY;
-const apiKey = AIzaSyDqYwSKjMlOhfJGjkx1QbblVx7YxVYV9Kc;
+const apiKey = 'AIzaSyDqYwSKjMlOhfJGjkx1QbblVx7YxVYV9Kc';
 
 
 if (!apiKey) {
