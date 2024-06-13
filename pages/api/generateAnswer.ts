@@ -1,7 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+// const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+const apiKey = AIzaSyDqYwSKjMlOhfJGjkx1QbblVx7YxVYV9Kc;
+
 
 if (!apiKey) {
     throw new Error('API key is missing');
