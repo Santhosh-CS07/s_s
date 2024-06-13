@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
-import { FaRegComments } from "react-icons/fa";
+import { FaSpinner } from "react-icons/fa";
 
 interface Question {
   id: string;
@@ -21,16 +21,18 @@ const QuizMode: React.FC = () => {
   const handleTagClick = async (tag: string) => {
     setLoading(true);
     try {
-      const prompt2 = "Ensure the questions cover a variety of topics and difficulty levels. Each question should have four options, with only one correct answer. The questions should be diverse and engaging.";
+      const prompt2 = `Ensure the questions cover a variety of topics on ${tag}. Each question should have four options, with only one correct answer. The questions should be diverse and engaging.`;
       const prompt1 = `Generate 10 different multiple-choice questions (MCQs) in the following JSON format:
 { id: [question_id], question: "[question_text]", options: ["[option1]", "[option2]", "[option3]", "[option4]"], answer: "[correct_option]" },`;
-      const response: any = await axios.post("/api/generateAnswer", { prompt: prompt1 + prompt2 });
-      console.log("data_", response.data.text)
+      const response: any = await axios.post("/api/generateAnswer", { prompt: prompt1 + " " + prompt2 });
 
-      const data_: any = JSON.parse(response.data.text);
-      if (response.data && Array.isArray(response.data)) {
+      const cleanedText = response.data.text.replace(/```json|```/g, '').trim();
 
-        setQuestions(response.data.text);
+      const data_ = JSON.parse(cleanedText);
+
+      console.log("Parsed data:", data_);
+      if (response.data && Array.isArray(data_)) {
+        setQuestions(data_);
       } else {
         setQuestions([]);
       }
@@ -56,17 +58,25 @@ const QuizMode: React.FC = () => {
     setShowResults(true);
   };
 
-  console.log("questions___", questions)
+  const getScore = () => {
+    let score = 0;
+    questions.forEach((question) => {
+      if (selectedOptions[question.id] === question.answer) {
+        score++;
+      }
+    });
+    return score;
+  };
 
   return (
-    <div className="flex justify-evenly h-[75vh] p-4 bg-gray-50">
-      <div className="w-4/5 mx-4 bg-white shadow-lg rounded-lg p-6 flex flex-col">
-        <div className="flex justify-end mb-4 space-x-2">
+    <div className="flex flex-col items-center h-screen p-4">
+      <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-6">
+        <div className="flex justify-center flex-wrap mb-4 space-x-2">
           {tags.map((tag) => (
             <button
               key={tag}
               onClick={() => handleTagClick(tag)}
-              className="px-2 py-1 bg-gray-200 text-gray-600 rounded-md text-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              className="px-3 py-1 bg-blue-200 text-blue-600 rounded-md text-sm hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               {tag}
             </button>
@@ -75,18 +85,14 @@ const QuizMode: React.FC = () => {
         <div className="flex-grow overflow-y-auto mb-4 relative">
           {loading ? (
             <div className="flex items-center justify-center h-full">
-              <FaRegComments className="animate-spin text-4xl text-blue-500" />
+              <FaSpinner className="animate-spin text-4xl text-blue-500" />
             </div>
           ) : questions.length === 0 ? (
-            <div className="text-center text-gray-500">
-              No questions available.
-            </div>
+            <div className="text-center text-gray-500">No questions available. <p><i>please select any tag above</i></p></div>
           ) : (
             questions.map((question) => (
               <div key={question.id} className="mb-4">
-                <p className="mb-2 text-lg font-semibold">
-                  {question.question}
-                </p>
+                <p className="mb-2 text-lg font-semibold">{question.question}</p>
                 <div className="space-y-2">
                   {question.options.map((option) => (
                     <label
@@ -112,7 +118,7 @@ const QuizMode: React.FC = () => {
             ))
           )}
         </div>
-        <div className="mt-4">
+        <div className="mt-4 flex justify-center">
           <button
             onClick={handleSubmit}
             className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
@@ -121,35 +127,33 @@ const QuizMode: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="w-1/5 bg-white shadow-lg rounded-lg p-6 hidden sm:block">
-        <h2 className="text-lg font-semibold mb-4">Results History</h2>
-        {showResults && (
-          <div>
-            {questions.map((question) => (
-              <div key={question.id} className="mb-4">
-                <p className="font-semibold">{question.question}</p>
-                <p>
-                  Your answer:{" "}
-                  <span
-                    className={`font-semibold ${selectedOptions[question.id] === question.answer
-                      ? "text-green-500"
-                      : "text-red-500"
-                      }`}
-                  >
-                    {selectedOptions[question.id]}
-                  </span>
+      {showResults && (
+        <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-6 mt-4">
+          <h2 className="text-lg font-semibold mb-4">Results</h2>
+          <p className="mb-4">Score: {getScore()} / {questions.length}</p>
+          {questions.map((question) => (
+            <div key={question.id} className="mb-4">
+              <p className="font-semibold">{question.question}</p>
+              <p>
+                Your answer:{" "}
+                <span
+                  className={`font-semibold ${selectedOptions[question.id] === question.answer
+                    ? "text-green-500"
+                    : "text-red-500"
+                    }`}
+                >
+                  {selectedOptions[question.id]}
+                </span>
+              </p>
+              {selectedOptions[question.id] !== question.answer && (
+                <p className="text-gray-600">
+                  Correct answer: <span className="font-semibold">{question.answer}</span>
                 </p>
-                {selectedOptions[question.id] !== question.answer && (
-                  <p className="text-gray-600">
-                    Correct answer:{" "}
-                    <span className="font-semibold">{question.answer}</span>
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

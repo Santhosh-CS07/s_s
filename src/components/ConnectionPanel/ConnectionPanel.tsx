@@ -18,13 +18,13 @@ const Page = () => {
       <div className="fixed top-0 w-full z-50">
         <Navbar />
       </div>
-      <div className="flex justify-center">
+      <div className="flex mt-4 flex-wrap justify-center">
         <button
           onClick={() => toggleMode("ai")}
-          className={`flex items-center px-4 py-2 ${mode === "ai"
+          className={`flex items-center px-4 py-2 m-2 ${mode === "ai"
             ? "bg-blue-500 text-white"
             : "bg-gray-200 text-gray-600"
-            } rounded-md mr-4 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300`}
+            } rounded-md w-full sm:w-auto sm:mr-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300`}
         >
           <FaRobot className="mr-2" />
           AI Mode
@@ -32,20 +32,20 @@ const Page = () => {
 
         <button
           onClick={() => toggleMode("quiz")}
-          className={`flex items-center px-4 py-2 ${mode === "quiz"
+          className={`flex items-center px-4 py-2 m-2 ${mode === "quiz"
             ? "bg-blue-500 text-white"
             : "bg-gray-200 text-gray-600"
-            } rounded-md mr-4 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300`}
+            } rounded-md w-full sm:w-auto sm:mr-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300`}
         >
           <FaRegQuestionCircle className="mr-2" />
           Quiz Mode
         </button>
         <button
           onClick={() => toggleMode("human")}
-          className={`flex items-center px-4 py-2 ${mode === "human"
+          className={`flex items-center px-4 py-2 m-2 ${mode === "human"
             ? "bg-blue-500 text-white"
             : "bg-gray-200 text-gray-600"
-            } rounded-md mr-4 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300`}
+            } rounded-md w-full sm:w-auto sm:mr-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300`}
         >
           <FaUser className="mr-2" />
           Human Mode
