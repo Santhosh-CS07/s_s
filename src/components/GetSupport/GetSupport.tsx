@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import SupportCard from "../../../components/SupportCard/SupportCard";
-import Departmentfilter from "../../../components/DepartmentFilter/DepartmentFilter";
+import SupportCard from "../SupportCard/SupportCard";
+import Departmentfilter from "../DepartmentFilter/DepartmentFilter";
 import Navbar from "@/components/DashboardNavbar/Navbar";
 import ConnectionPanel from "@/components/ConnectionPanel/ConnectionPanel";
 

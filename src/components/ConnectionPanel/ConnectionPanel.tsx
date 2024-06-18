@@ -30,7 +30,7 @@ const Page = () => {
           AI Mode
         </button>
 
-        <button
+        {/* <button
           onClick={() => toggleMode("quiz")}
           className={`flex items-center px-4 py-2 m-2 ${mode === "quiz"
             ? "bg-blue-500 text-white"
@@ -39,7 +39,7 @@ const Page = () => {
         >
           <FaRegQuestionCircle className="mr-2" />
           Quiz Mode
-        </button>
+        </button> */}
         <button
           onClick={() => toggleMode("human")}
           className={`flex items-center px-4 py-2 m-2 ${mode === "human"
@@ -54,7 +54,7 @@ const Page = () => {
       <div className="p-4">
         {mode === "ai" && <AIMode />}
         {mode === "human" && <HumanMode />}
-        {mode === "quiz" && <QuizMode />}
+        {/* {mode === "quiz" && <QuizMode />} */}
       </div>
     </div>
   );

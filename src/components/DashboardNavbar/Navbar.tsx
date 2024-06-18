@@ -6,6 +6,8 @@ import {
   FaInfoCircle,
   FaBell,
   FaRocketchat,
+  FaAddressBook,
+  FaBookReader,
 } from "react-icons/fa";
 
 const Navbar = (props: any) => {
@@ -15,14 +17,14 @@ const Navbar = (props: any) => {
         {/* Brand Logo */}
         <div className="flex items-center">
           <h2 className="text-4xl font-bold text-gray-800 uppercase tracking-wider bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
-            ekathra
+            ekathra - ss
           </h2>
 
           {/* <img src="/path-to-your-logo.png" alt="Brand Logo" className="h-10" /> */}
         </div>
 
         {/* Search Bar */}
-        <div className="hidden sm:inline flex items-center w-full max-w-md mx-4 mt-4 sm:mt-0">
+        {/* <div className="hidden sm:inline flex items-center w-full max-w-md mx-4 mt-4 sm:mt-0">
           <div className="relative w-full">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <FaSearch className="text-gray-500" />
@@ -33,35 +35,44 @@ const Navbar = (props: any) => {
               placeholder="Search"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* Buttons */}
         <div className="flex flex-row sm:flex-row space-x-2 mt-4 sm:mt-0">
           <a
-            href="/dashboard/getsupport"
+            href="/dashboard/livehelp"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <FaInfoCircle className="text-blue-500 hidden sm:inline text-2xl me-2" />
-            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent text-lg sm:inline">
-              Ask
+            <span className="text-lg sm:inline">
+              Live Help
             </span>
           </a>
-          {/* <a
+          <a
             href="/dashboard"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <FaHome className="text-blue-500 hidden sm:inline text-2xl me-2" />
-            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent text-lg sm:inline">
-              Feed
+            <span className="text-lg sm:inline">
+              Home
             </span>
-          </a> */}
+          </a>
           <a
             href="/dashboard/givesupport"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <FaHandsHelping className="text-blue-500 hidden sm:inline text-2xl me-2" />
-            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent text-lg sm:inline">
-              Business
+            <span className=" text-lg sm:inline">
+              Services
+            </span>
+          </a>
+          <a
+            href="/dashboard/learn"
+            className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
+          >
+            <FaBookReader className="text-blue-500 hidden sm:inline text-2xl me-2" />
+            <span className=" text-lg sm:inline">
+              Learn
             </span>
           </a>
           <a
@@ -69,16 +80,16 @@ const Navbar = (props: any) => {
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <FaRocketchat className="text-blue-500 hidden sm:inline text-2xl me-2" />
-            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent text-lg sm:inline">
+            <span className=" text-lg sm:inline">
               Chat
             </span>
           </a>
-          <button className="hidden sm:inline flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150">
+          {/* <button className="hidden sm:inline flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150">
             <FaBell className="text-blue-500 text-2xl" />
             <span className="absolute top-20 right-3 sm:top-2 sm:right-14 flex items-center justify-center h-5 w-5 text-xs text-white bg-red-600 rounded-full">
               2
             </span>
-          </button>
+          </button> */}
         </div>
       </div>
     </nav>
