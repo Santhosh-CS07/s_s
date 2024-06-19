@@ -1,50 +1,30 @@
-import React from "react";
-import {
-  FaSearch,
-  FaHome,
-  FaHandsHelping,
-  FaInfoCircle,
-  FaBell,
-  FaRocketchat,
-  FaAddressBook,
-  FaBookReader,
-} from "react-icons/fa";
+"use client";
+import React, { useState } from "react";
+import { HiOutlineBookOpen, HiOutlineHand, HiOutlineHeart, HiOutlineHome, HiOutlineLogout } from 'react-icons/hi';
 
 const Navbar = (props: any) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav className="bg-white shadow-md">
-      <div className="container mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         {/* Brand Logo */}
         <div className="flex items-center">
-          <h2 className="text-4xl font-bold text-gray-800 uppercase tracking-wider bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
-            ekathra - ss
-          </h2>
-
-          {/* <img src="/path-to-your-logo.png" alt="Brand Logo" className="h-10" /> */}
+          <h2 className="text-4xl">ekathra <span className="text-blue-500">ss</span></h2>
         </div>
 
-        {/* Search Bar */}
-        {/* <div className="hidden sm:inline flex items-center w-full max-w-md mx-4 mt-4 sm:mt-0">
-          <div className="relative w-full">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <FaSearch className="text-gray-500" />
-            </div>
-            <input
-              type="text"
-              className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm"
-              placeholder="Search"
-            />
-          </div>
-        </div> */}
-
-        {/* Buttons */}
-        <div className="flex flex-row sm:flex-row space-x-2 mt-4 sm:mt-0">
+        {/* Menu Items */}
+        <div className="hidden sm:flex sm:items-center">
           <a
             href="/dashboard/livehelp"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaInfoCircle className="text-blue-500 hidden sm:inline text-2xl me-2" />
-            <span className="text-lg sm:inline">
+            <HiOutlineHeart className="text-blue-500 text-2xl mr-2" />
+            <span className="text-lg">
               Live Help
             </span>
           </a>
@@ -52,8 +32,8 @@ const Navbar = (props: any) => {
             href="/dashboard"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaHome className="text-blue-500 hidden sm:inline text-2xl me-2" />
-            <span className="text-lg sm:inline">
+            <HiOutlineHome className="text-blue-500 text-2xl mr-2" />
+            <span className="text-lg">
               Home
             </span>
           </a>
@@ -61,8 +41,8 @@ const Navbar = (props: any) => {
             href="/dashboard/givesupport"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaHandsHelping className="text-blue-500 hidden sm:inline text-2xl me-2" />
-            <span className=" text-lg sm:inline">
+            <HiOutlineHand className="text-blue-500 text-2xl mr-2" />
+            <span className="text-lg">
               Services
             </span>
           </a>
@@ -70,26 +50,103 @@ const Navbar = (props: any) => {
             href="/dashboard/learn"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaBookReader className="text-blue-500 hidden sm:inline text-2xl me-2" />
-            <span className=" text-lg sm:inline">
+            <HiOutlineBookOpen className="text-blue-500 text-2xl mr-2" />
+            <span className="text-lg">
               Learn
             </span>
           </a>
           <a
-            href="/dashboard/chatroom"
+            href="/"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
-            <FaRocketchat className="text-blue-500 hidden sm:inline text-2xl me-2" />
-            <span className=" text-lg sm:inline">
-              Chat
+            <HiOutlineLogout className="text-blue-500 text-2xl mr-2" />
+            <span className="text-lg">
+              Logout
             </span>
           </a>
-          {/* <button className="hidden sm:inline flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150">
-            <FaBell className="text-blue-500 text-2xl" />
-            <span className="absolute top-20 right-3 sm:top-2 sm:right-14 flex items-center justify-center h-5 w-5 text-xs text-white bg-red-600 rounded-full">
-              2
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="ml-auto flex sm:hidden">
+          <h2 className="me-4">Menu</h2>
+          <button
+            className="text-gray-700 focus:outline-none"
+            onClick={toggleMenu}
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {menuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Items */}
+      <div className={`container mx-auto px-4 py-2 sm:hidden ${menuOpen ? 'block' : 'hidden'}`}>
+        <div className="flex flex-col space-y-2">
+          <a
+            href="/dashboard/livehelp"
+            className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
+          >
+            <HiOutlineHeart className="text-blue-500 text-2xl mr-2" />
+            <span className="text-lg">
+              Live Help
             </span>
-          </button> */}
+          </a>
+          <a
+            href="/dashboard"
+            className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
+          >
+            <HiOutlineHome className="text-blue-500 text-2xl mr-2" />
+            <span className="text-lg">
+              Home
+            </span>
+          </a>
+          <a
+            href="/dashboard/givesupport"
+            className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
+          >
+            <HiOutlineHand className="text-blue-500 text-2xl mr-2" />
+            <span className="text-lg">
+              Services
+            </span>
+          </a>
+          <a
+            href="/dashboard/learn"
+            className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
+          >
+            <HiOutlineBookOpen className="text-blue-500 text-2xl mr-2" />
+            <span className="text-lg">
+              Learn
+            </span>
+          </a>
+          <a
+            href="/"
+            className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
+          >
+            <HiOutlineLogout className="text-blue-500 text-2xl mr-2" />
+            <span className="text-lg">
+              Logout
+            </span>
+          </a>
         </div>
       </div>
     </nav>

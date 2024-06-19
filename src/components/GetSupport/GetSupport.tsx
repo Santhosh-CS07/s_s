@@ -95,8 +95,8 @@ const Getsupport = (props: any) => {
               </div>
             </div>
           </div>
-          <div className="container mx-auto mt-16">
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="container mx-auto mt-16 px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {cardsData?.map((el: any, index: number) => (
                 <div key={index} className="w-full">
                   <SupportCard
@@ -109,6 +109,7 @@ const Getsupport = (props: any) => {
               ))}
             </div>
           </div>
+
         </>
       )}
     </div>

@@ -35,7 +35,7 @@ const AIMode = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col">
       <div className="flex-grow overflow-y-auto p-4 bg-gray-50">
         {chat.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full text-gray-500">

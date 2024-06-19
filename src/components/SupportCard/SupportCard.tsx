@@ -13,8 +13,9 @@ const SupportCard = (props: any) => {
     setSupportCard(false);
     setConnectionPanel(true);
   };
+
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 my-2 max-w-xs mx-auto transform hover:-translate-y-1 transition-transform duration-300">
+    <div className="bg-white shadow-md rounded-lg p-4 mb-2 mx-auto sm:max-w-xs md:max-w-sm lg:max-w-xs xl:max-w-sm transform hover:-translate-y-1 transition-transform duration-300">
       <div className="flex items-center mb-2">
         <div>
           <h4 className="text-sm font-semibold text-gray-800">{data?.title}</h4>
@@ -39,11 +40,10 @@ const SupportCard = (props: any) => {
         )}
         <span className="text-yellow-500 text-sm">{data?.rating}⭐</span>
         <p
-          className={`text-xs font-bold ${
-            data?.liveStatus
-              ? "bg-green-100 text-green-800 px-2 py-1 rounded-full"
-              : "bg-red-100 text-red-800 px-2 py-1 rounded-full"
-          }`}
+          className={`text-xs font-bold ${data?.liveStatus
+            ? "bg-green-100 text-green-800 px-2 py-1 rounded-full"
+            : "bg-red-100 text-red-800 px-2 py-1 rounded-full"
+            }`}
         >
           {data?.liveStatus ? "Live Now" : "Offline"}
         </p>
