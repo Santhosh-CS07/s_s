@@ -19,13 +19,10 @@ export default function HeroSection() {
         <div className="flex justify-items-center pt-12 sm:pt-24 md:w-1/2 text-left">
           <div className="">
             <h1 className="text-4xl md:text-4xl font-bold text-blue-900 mb-6">
-              Join Ekathra COMMUNITY for Real-Time Help at Your Fingertips.
+              Join Ekathra COMMUNITY for Real-Time Help at Right time.
             </h1>
             <p className="text-lg md:text-xl text-white mb-2 overflow-wrap">
-              Ekathra - Where Every Question Gets the Answer It Deserves.
-            </p>
-            <p className="text-lg md:text-xl text-white mb-8 overflow-wrap">
-              We connect you with Real Experinced People at Right Time.
+              Every Human is a unique creature - Learn from them.
             </p>
             {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             <div className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-light-blue-500">
@@ -47,7 +44,7 @@ export default function HeroSection() {
                         </div> */}
           </div>
         </div>
-        <div className="md:w-1/2 flex justify-center mt-12">
+        <div className="md:w-1/2 flex justify-center mt-4">
           <Authentication />
         </div>
       </div>

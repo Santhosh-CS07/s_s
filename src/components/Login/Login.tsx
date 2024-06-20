@@ -1,4 +1,5 @@
 "use client";
+import { apiCall, endpoints } from "@/apicalls";
 import React, { useState, useEffect } from "react";
 
 const Login = (props: any) => {
@@ -23,12 +24,16 @@ const Login = (props: any) => {
     setShowPassword(!showPassword);
   };
 
-  const loginUser: any = (e: any) => {
+  const loginUser: any = async (e: any) => {
     e.preventDefault();
-    const staticUsername: string = "123";
-    const staticPassword: string = "123";
+    const response = await apiCall(endpoints.getUser, 'get', {
+      params: {
+        mobileNumber: username,
+        password: password
+      }
+    });
 
-    if (username === staticUsername && password === staticPassword) {
+    if (response.status === 1) {
       window.location.href = "/dashboard";
     } else {
       alert("Invalid username or password");
@@ -36,6 +41,7 @@ const Login = (props: any) => {
       setPassword("");
     }
   };
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       loginUser(e);
@@ -46,13 +52,13 @@ const Login = (props: any) => {
     // <div className="min-h-screen bg-gradient-to-r from-green-400 to-blue-500 flex justify-center items-center">
     <div className="bg-white p-8 rounded-lg shadow-md w-100">
       <h2 className="text-2xl font-semibold mb-4 text-center">Login</h2>
-      <form>
+      <form onSubmit={loginUser}>
         <div className="mb-4">
           <label
             htmlFor="mobile"
             className="block text-sm font-medium text-gray-600"
           >
-            Username *
+            Mobile Number *
           </label>
           <input
             type="tel"
@@ -99,7 +105,7 @@ const Login = (props: any) => {
           </button>
         </div>
         <button
-          onClick={loginUser}
+          type="submit"
           className="w-full bg-blue-500 text-white rounded-md py-2 hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
         >
           Login
