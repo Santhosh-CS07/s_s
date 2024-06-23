@@ -1,14 +1,8 @@
+"use client";
 import React from "react";
-import Contentpage from "../ContentPage/Contentpage";
-import Analysis from "../Analysis/Analysis";
-import UserProfile from "../UserProfile/Userprofile";
 
 const Dashboardmainpage = () => {
-  const handleLogout = () => {
-    alert("Logout clicked");
-  };
-
-  const services: any = [
+  const services = [
     {
       title: "Get Live Help from Experts",
       description: [
@@ -64,14 +58,16 @@ const Dashboardmainpage = () => {
   ];
 
   return (
-    <div className="py-20 flex justify-center items-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto p-6">
+    <div className="py-4 flex justify-center items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full mx-auto p-4">
         {services.map((service: any, index: number) => (
           <div
             key={index}
             className={`p-8 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105 ${service.bgGradient} ${service.hoverColor}`}
           >
-            <h2 className="text-2xl font-bold text-white mb-4 text-center">{service.title}</h2>
+            <h3 className="font-bold text-white mb-4 text-center">
+              {service.title}
+            </h3>
             <ul className="mb-6 space-y-2 text-white">
               {service.description.map((point: any, idx: number) => (
                 <li key={idx} className="flex items-center">
@@ -90,18 +86,17 @@ const Dashboardmainpage = () => {
                 </li>
               ))}
             </ul>
-            {/* <a
-              href={service.buttonLink}
-              className="block w-full text-center bg-white text-blue-500 font-bold py-2 rounded-lg transition-colors duration-300 hover:bg-gray-200"
-            >
-              {service.buttonText}
-            </a> */}
             <a
-              href={service.buttonText.toLowerCase().includes("coming") ? null : service.buttonLink} // Disable link if "Coming Soon"
-              className={`block w-full text-center font-bold py-2 rounded-lg transition-colors duration-300 ${service.buttonText.toLowerCase().includes("coming")
-                ? "bg-gray-300 text-gray-500 cursor-not-allowed pointer-events-none"
-                : "bg-white text-blue-500 hover:bg-gray-200"
-                }`}
+              href={
+                service.buttonText.toLowerCase().includes("coming")
+                  ? null
+                  : service.buttonLink
+              } // Disable link if "Coming Soon"
+              className={`block w-full text-center font-bold py-2 rounded-lg transition-colors duration-300 ${
+                service.buttonText.toLowerCase().includes("coming")
+                  ? "bg-gray-300 text-gray-500 cursor-not-allowed pointer-events-none"
+                  : "bg-white text-blue-500 hover:bg-gray-200"
+              }`}
             >
               {service.buttonText}
             </a>
