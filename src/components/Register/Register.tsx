@@ -13,13 +13,17 @@ const Register = (props: any) => {
     city: "",
     state: "",
     verified: false,
-    jobTitle: ""
+    jobTitle: "",
   });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response: any = await apiCall(endpoints.createUser, 'post', formData);
+      const response: any = await apiCall(
+        endpoints.createUser,
+        "post",
+        formData
+      );
       if (response.status === 1) {
         setLogin(true);
         setForgetPassword(false);
@@ -54,7 +58,10 @@ const Register = (props: any) => {
       <h2 className="text-xl font-semibold mb-4 text-center">
         Create an Account
       </h2>
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form
+        onSubmit={handleSubmit}
+        className="grid grid-cols-1 md:grid-cols-2 gap-4"
+      >
         <div>
           <label
             htmlFor="name"
