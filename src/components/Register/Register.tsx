@@ -52,7 +52,7 @@ const Register = (props: any) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-2xl mx-auto">
       <h2 className="text-xl font-semibold mb-4 text-center">
-        Create an Account
+        Sign <span className="text-white bg-blue-900 py-1 px-2 rounded">Up</span>
       </h2>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
@@ -176,35 +176,19 @@ const Register = (props: any) => {
             onChange={handleInputChange}
           />
         </div>
-
-        {/* <div>
-          <label
-            htmlFor="verified"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Verified
-          </label>
-          <input
-            type="checkbox"
-            id="verified"
-            name="verified"
-            className="mt-1 p-1 border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-            onChange={(e) => setFormData({ ...formData, verified: e.target.checked })}
-          />
-        </div> */}
         <div className="col-span-1 md:col-span-2">
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white rounded-md py-2 hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+            className="w-full bg-blue-900 text-white font-bold rounded-md py-2 hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
           >
-            Create
+            Create An Account
           </button>
         </div>
       </form>
       <div className="text-center mt-4">
         <button
           onClick={handleLogin}
-          className="text-sm text-blue-500 hover:underline bg-transparent border-none cursor-pointer"
+          className="text-sm text-blue-900 hover:underline bg-transparent border-none cursor-pointer"
         >
           Already have an account? Login
         </button>

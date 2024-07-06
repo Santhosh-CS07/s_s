@@ -51,7 +51,7 @@ const Login = (props: any) => {
   return (
     // <div className="min-h-screen bg-gradient-to-r from-green-400 to-blue-500 flex justify-center items-center">
     <div className="bg-white p-8 rounded-lg shadow-md w-100">
-      <h2 className="text-2xl font-semibold mb-4 text-center">Login</h2>
+      <h2 className="text-2xl font-semibold mb-4 text-center">Sign <span className="text-white bg-blue-900 py-0 px-2 rounded">In</span></h2>
       <form onSubmit={loginUser}>
         <div className="mb-4">
           <label
@@ -65,6 +65,7 @@ const Login = (props: any) => {
             id="username"
             name="username"
             onKeyDown={handleKeyDown}
+            required
             // placeholder="mobile, username, email"
             onChange={(e) => setUsername(e.target.value)}
             className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
@@ -81,6 +82,7 @@ const Login = (props: any) => {
             type={showPassword ? "text" : "password"}
             id="password"
             name="password"
+            required
             onKeyDown={handleKeyDown}
             onChange={(e) => setPassword(e.target.value)}
             // placeholder="enter your password"
@@ -99,14 +101,14 @@ const Login = (props: any) => {
         <div className="text-right mb-4">
           <button
             onClick={handleForgetPassword}
-            className="text-sm text-blue-500 hover:underline"
+            className="text-sm text-blue-900 hover:underline"
           >
             Forgot Password?
           </button>
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white rounded-md py-2 hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+          className="w-full bg-blue-900 font-bold text-white rounded-md py-2 hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
         >
           Login
         </button>
@@ -114,7 +116,7 @@ const Login = (props: any) => {
       <div className="text-center mt-4">
         <button
           onClick={handleCreateAccount}
-          className="text-sm text-blue-500 hover:underline bg-transparent border-none cursor-pointer"
+          className="text-sm text-blue-900 hover:underline bg-transparent border-none cursor-pointer"
         >
           Create an Account?
         </button>

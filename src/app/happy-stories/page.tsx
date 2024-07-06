@@ -31,15 +31,12 @@ const HappyStories = () => {
 
     return (
         <div className="bg-white py-11">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">
-                    Happy Stories
-                </h2>
-                <div className="grid gap-8 lg:grid-cols-3">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid gap-8 lg:grid-cols-2">
                     {stories.map((story, index) => (
                         <div
                             key={index}
-                            className="p-6 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg shadow-md text-white"
+                            className="p-6 rounded-lg shadow-md"
                         >
                             <h3 className="text-xl font-bold">{story.name}</h3>
                             <p className="mt-4">{story.feedback}</p>

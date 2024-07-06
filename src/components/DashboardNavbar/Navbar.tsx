@@ -14,7 +14,7 @@ const Navbar = (props: any) => {
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         {/* Brand Logo */}
         <div className="flex items-center">
-          <h2 className="text-4xl">ekathra <span className="text-blue-500">ss</span></h2>
+          <h2 className="text-4xl">ekathra <span className="text-blue-500 bg-green-500">ss</span></h2>
         </div>
 
         {/* Menu Items */}
