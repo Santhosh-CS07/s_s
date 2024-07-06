@@ -2,11 +2,12 @@
 
 import axios, { AxiosError, AxiosResponse, Method } from 'axios';
 
-const apiUrl = 'http://localhost:3001';
+// const apiUrl = 'http://localhost:3001';
+const apiUrl = 'https://s-s-backend.vercel.app';
 
 const endpoints = {
-    createUser: `${apiUrl}/users/create`,
-    getUser: `${apiUrl}/users/getUser`
+    createUser: `${apiUrl}/v1/users`,
+    getUser: `${apiUrl}/v1/users/find`
     // Add more endpoints here as needed
 };
 

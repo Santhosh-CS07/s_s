@@ -26,13 +26,12 @@ const Login = (props: any) => {
 
   const loginUser: any = async (e: any) => {
     e.preventDefault();
-    const response = await apiCall(endpoints.getUser, 'get', {
+    const response = await apiCall(endpoints.getUser, "get", {
       params: {
         mobileNumber: username,
-        password: password
-      }
+        password: password,
+      },
     });
-
     if (response.status === 1) {
       window.location.href = "/dashboard";
     } else {
@@ -43,7 +42,7 @@ const Login = (props: any) => {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       loginUser(e);
     }
   };
