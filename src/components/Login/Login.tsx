@@ -7,6 +7,7 @@ const Login = (props: any) => {
   const [showPassword, setShowPassword] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleForgetPassword: any = () => {
     setForgetPassword(true);
@@ -26,18 +27,21 @@ const Login = (props: any) => {
 
   const loginUser: any = async (e: any) => {
     e.preventDefault();
-    const response = await apiCall(endpoints.getUser, "get", {
-      params: {
-        mobileNumber: username,
-        password: password,
-      },
-    });
-    if (response.status === 1) {
-      window.location.href = "/dashboard";
-    } else {
-      alert("Invalid username or password");
-      setUsername("");
-      setPassword("");
+    try {
+      const response = await apiCall(endpoints.getUser, 'get', {
+        params: {
+          mobileNumber: username,
+          password: password,
+        },
+      });
+      if (response.status === 1) {
+        window.location.href = '/dashboard';
+      } else {
+        setErrorMessage('Invalid username or password');
+      }
+    } catch (error) {
+      console.error('Error logging in:', error);
+      setErrorMessage('Invalid username or password');
     }
   };
 
@@ -48,9 +52,9 @@ const Login = (props: any) => {
   };
 
   return (
-    // <div className="min-h-screen bg-gradient-to-r from-green-400 to-blue-500 flex justify-center items-center">
     <div className="bg-white p-8 rounded-lg shadow-md w-100">
       <h2 className="text-2xl font-semibold mb-4 text-center">Sign <span className="text-white bg-blue-900 py-0 px-2 rounded">In</span></h2>
+      {errorMessage && <div className="mb-4 text-red-600 text-center">{errorMessage}</div>}
       <form onSubmit={loginUser}>
         <div className="mb-4">
           <label
@@ -63,9 +67,9 @@ const Login = (props: any) => {
             type="tel"
             id="username"
             name="username"
+            value={username}
             onKeyDown={handleKeyDown}
             required
-            // placeholder="mobile, username, email"
             onChange={(e) => setUsername(e.target.value)}
             className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
           />
@@ -82,9 +86,9 @@ const Login = (props: any) => {
             id="password"
             name="password"
             required
+            value={password}
             onKeyDown={handleKeyDown}
             onChange={(e) => setPassword(e.target.value)}
-            // placeholder="enter your password"
             className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 pr-10"
           />
           <button
@@ -121,7 +125,6 @@ const Login = (props: any) => {
         </button>
       </div>
     </div>
-    // </div>
   );
 };
 
