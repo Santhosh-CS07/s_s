@@ -2,8 +2,8 @@
 
 import axios, { AxiosError, AxiosResponse, Method } from 'axios';
 
-const apiUrl = 'http://localhost:3001';
-// const apiUrl = 'https://s-s-backend.vercel.app';
+// const apiUrl = 'http://localhost:3001';
+const apiUrl = 'https://s-s-backend.vercel.app';
 
 const endpoints = {
     createUser: `${apiUrl}/v1/users`,
