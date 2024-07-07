@@ -1,6 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import { HiOutlineBookOpen, HiOutlineHand, HiOutlineHeart, HiOutlineHome, HiOutlineLogout } from 'react-icons/hi';
+import {
+  HiOutlineBookOpen,
+  HiOutlineHand,
+  HiOutlineHeart,
+  HiOutlineHome,
+  HiOutlineLogout,
+} from "react-icons/hi";
 
 const Navbar = (props: any) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,45 +33,35 @@ const Navbar = (props: any) => {
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <HiOutlineHeart className="text-blue-500 text-2xl mr-2" />
-            <span className="text-lg">
-              Live Help
-            </span>
+            <span className="text-lg">Live Help</span>
           </a>
           <a
             href="/dashboard"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <HiOutlineHome className="text-blue-500 text-2xl mr-2" />
-            <span className="text-lg">
-              Home
-            </span>
+            <span className="text-lg">Home</span>
           </a>
           <a
             href="/dashboard/givesupport"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <HiOutlineHand className="text-blue-500 text-2xl mr-2" />
-            <span className="text-lg">
-              Services
-            </span>
+            <span className="text-lg">Services</span>
           </a>
           <a
             href="/dashboard/learn"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <HiOutlineBookOpen className="text-blue-500 text-2xl mr-2" />
-            <span className="text-lg">
-              Learn
-            </span>
+            <span className="text-lg">Learn</span>
           </a>
           <a
             href="/"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <HiOutlineLogout className="text-blue-500 text-2xl mr-2" />
-            <span className="text-lg">
-              Logout
-            </span>
+            <span className="text-lg">Logout</span>
           </a>
         </div>
 
@@ -103,52 +99,46 @@ const Navbar = (props: any) => {
       </div>
 
       {/* Mobile Menu Items */}
-      <div className={`container mx-auto px-4 py-2 sm:hidden ${menuOpen ? 'block' : 'hidden'}`}>
+      <div
+        className={`container mx-auto px-4 py-2 sm:hidden ${
+          menuOpen ? "block" : "hidden"
+        }`}
+      >
         <div className="flex flex-col space-y-2">
           <a
             href="/dashboard/livehelp"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <HiOutlineHeart className="text-blue-500 text-2xl mr-2" />
-            <span className="text-lg">
-              Live Help
-            </span>
+            <span className="text-lg">Live Help</span>
           </a>
           <a
             href="/dashboard"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <HiOutlineHome className="text-blue-500 text-2xl mr-2" />
-            <span className="text-lg">
-              Home
-            </span>
+            <span className="text-lg">Home</span>
           </a>
           <a
             href="/dashboard/givesupport"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <HiOutlineHand className="text-blue-500 text-2xl mr-2" />
-            <span className="text-lg">
-              Services
-            </span>
+            <span className="text-lg">Services</span>
           </a>
           <a
             href="/dashboard/learn"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <HiOutlineBookOpen className="text-blue-500 text-2xl mr-2" />
-            <span className="text-lg">
-              Learn
-            </span>
+            <span className="text-lg">Learn</span>
           </a>
           <a
             href="/"
             className="flex items-center justify-center px-4 py-2 text-gray-700 transition duration-150"
           >
             <HiOutlineLogout className="text-blue-500 text-2xl mr-2" />
-            <span className="text-lg">
-              Logout
-            </span>
+            <span className="text-lg">Logout</span>
           </a>
         </div>
       </div>
