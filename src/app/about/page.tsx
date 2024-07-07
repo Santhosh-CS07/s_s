@@ -8,7 +8,7 @@ const About = () => {
                 <div className="text-center max-w-3xl mx-auto">
                     <p className="text-xl mb-8">
                         We are a specialized team with a global vision and youthful energy,
-                        targeting to help solve every individual's problems. Our mission is
+                        targeting to help solve every individuals problems. Our mission is
                         to provide personalized solutions that cater to your unique needs.
                     </p>
                     <div className="bg-blue-900 text-white rounded-lg p-6 shadow-lg">
