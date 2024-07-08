@@ -9,9 +9,14 @@ import {
 const SupportCard = (props: any) => {
   const { setConnectionPanel, setSupportCard, data, setGetSupport } = props;
 
-  const openConnectionPanel = () => {
-    setSupportCard(false);
-    setConnectionPanel(true);
+  const openConnectionPanel = (props: any) => {
+    if (props === "Ai") {
+      setSupportCard(false);
+      setConnectionPanel("Ai");
+    } else {
+      setSupportCard(false);
+      setConnectionPanel("Human");
+    }
   };
 
   return (
@@ -40,32 +45,32 @@ const SupportCard = (props: any) => {
         )}
         <span className="text-yellow-500 text-sm">{data?.rating}⭐</span>
         <p
-          className={`text-xs font-bold ${data?.liveStatus
-            ? "bg-green-100 text-green-800 px-2 py-1 rounded-full"
-            : "bg-red-100 text-red-800 px-2 py-1 rounded-full"
-            }`}
+          className={`text-xs font-bold ${
+            data?.liveStatus
+              ? "bg-green-100 text-green-800 px-2 py-1 rounded-full"
+              : "bg-red-100 text-red-800 px-2 py-1 rounded-full"
+          }`}
         >
           {data?.liveStatus ? "Live Now" : "Offline"}
         </p>
       </div>
       <div className="flex justify-between">
         <button
-          onClick={openConnectionPanel}
-          className="bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-1 px-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 text-sm"
+          onClick={() => {
+            openConnectionPanel("Ai");
+          }}
+          className="bg-gary-500 text-blue-900 font-bold py-1 px-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 text-sm"
         >
-          Ask Live
+          Ask AI
         </button>
-        {data?.isSaved ? (
-          <FaBookmark
-            title="save for later"
-            className="text-blue-900 mt-1 cursor-pointer"
-          />
-        ) : (
-          <FaRegBookmark
-            title="save for later"
-            className="text-blue-900 mt-1 cursor-pointer"
-          />
-        )}
+        <button
+          onClick={() => {
+            openConnectionPanel("Human");
+          }}
+          className="bg-blue-900 text-white font-bold py-1 px-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 text-sm"
+        >
+          Ask Human
+        </button>
       </div>
     </div>
   );

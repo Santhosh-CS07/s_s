@@ -31,7 +31,7 @@ const HumanMode = () => {
     switch (activeTab) {
       case "chat":
         return (
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col h-[70vh]">
             <div className="flex-grow overflow-y-auto mb-4 relative">
               {chat.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full text-gray-500">
@@ -42,10 +42,11 @@ const HumanMode = () => {
                 chat.map((chatItem: any, index: any) => (
                   <div
                     key={index}
-                    className={`mb-2 p-2 rounded-md ${chatItem.sender === "user"
+                    className={`mb-2 p-2 rounded-md ${
+                      chatItem.sender === "user"
                         ? "bg-blue-100 self-end"
                         : "bg-gray-100 self-start"
-                      }`}
+                    }`}
                   >
                     {chatItem.message}
                   </div>
@@ -63,7 +64,7 @@ const HumanMode = () => {
               />
               <button
                 onClick={handleSend}
-                className="ml-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="ml-2 px-4 py-2 bg-blue-900 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
               >
                 Ask
               </button>
@@ -90,44 +91,44 @@ const HumanMode = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col">
       <div className="flex-grow overflow-y-auto p-4">
         <div className="flex mb-4 space-x-4">
           <button
             onClick={() => setActiveTab("chat")}
-            className={`flex items-center px-4 py-2 rounded-md ${activeTab === "chat"
-                ? "bg-blue-500 text-white"
+            className={`flex items-center px-4 py-2 rounded-md ${
+              activeTab === "chat"
+                ? "bg-blue-900 text-white"
                 : "bg-gray-200 text-gray-600"
-              }`}
+            }`}
           >
             <FaRegComments className="mr-2" />
             Chat
           </button>
           <button
             onClick={() => setActiveTab("audio")}
-            className={`flex items-center px-4 py-2 rounded-md ${activeTab === "audio"
-                ? "bg-blue-500 text-white"
+            className={`flex items-center px-4 py-2 rounded-md ${
+              activeTab === "audio"
+                ? "bg-blue-900 text-white"
                 : "bg-gray-200 text-gray-600"
-              }`}
+            }`}
           >
             <FaPhone className="mr-2" />
             Audio Call
           </button>
           <button
             onClick={() => setActiveTab("video")}
-            className={`flex items-center px-4 py-2 rounded-md ${activeTab === "video"
-                ? "bg-blue-500 text-white"
+            className={`flex items-center px-4 py-2 rounded-md ${
+              activeTab === "video"
+                ? "bg-blue-900 text-white"
                 : "bg-gray-200 text-gray-600"
-              }`}
+            }`}
           >
             <FaVideo className="mr-2" />
             Video Call
           </button>
         </div>
         {renderContent()}
-      </div>
-      <div className="bg-gray-100 shadow-md rounded-md p-4 hidden sm:block">
-        <p>Service Provider Profile</p>
       </div>
     </div>
   );

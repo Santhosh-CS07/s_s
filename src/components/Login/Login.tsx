@@ -28,20 +28,20 @@ const Login = (props: any) => {
   const loginUser: any = async (e: any) => {
     e.preventDefault();
     try {
-      const response = await apiCall(endpoints.getUser, 'get', {
+      const response = await apiCall(endpoints.getUser, "get", {
         params: {
           mobileNumber: username,
           password: password,
         },
       });
       if (response.status === 1) {
-        window.location.href = '/dashboard';
+        window.location.href = "/dashboard";
       } else {
-        setErrorMessage('Invalid username or password');
+        setErrorMessage("Invalid username or password");
       }
     } catch (error) {
-      console.error('Error logging in:', error);
-      setErrorMessage('Invalid username or password');
+      console.error("Error logging in:", error);
+      setErrorMessage("Invalid username or password");
     }
   };
 
@@ -52,9 +52,14 @@ const Login = (props: any) => {
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md w-100">
-      <h2 className="text-2xl font-semibold mb-4 text-center">Sign <span className="text-white bg-blue-900 py-0 px-2 rounded">In</span></h2>
-      {errorMessage && <div className="mb-4 text-red-600 text-center">{errorMessage}</div>}
+    <div className="bg-white sm:my-12 p-8 rounded-lg shadow-md w-100">
+      <h2 className="text-2xl font-semibold mb-4 text-center">
+        Sign{" "}
+        <span className="text-white bg-blue-900 py-0 px-2 rounded">In</span>
+      </h2>
+      {errorMessage && (
+        <div className="mb-4 text-red-600 text-center">{errorMessage}</div>
+      )}
       <form onSubmit={loginUser}>
         <div className="mb-4">
           <label

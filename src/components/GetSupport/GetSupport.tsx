@@ -4,11 +4,13 @@ import SupportCard from "../SupportCard/SupportCard";
 import Departmentfilter from "../DepartmentFilter/DepartmentFilter";
 import Navbar from "@/components/DashboardNavbar/Navbar";
 import ConnectionPanel from "@/components/ConnectionPanel/ConnectionPanel";
+import AIMode from "../AIMode/AIMode";
+import HumanMode from "../HumanMode/HumanMode";
 
 const Getsupport = (props: any) => {
   const { setGetSupport, getSupport } = props;
   const [supportCard, setSupportCard] = useState(true);
-  const [connectionPanel, setConnectionPanel] = useState(false);
+  const [connectionPanel, setConnectionPanel] = useState("");
 
   const cardsData: any = [
     {
@@ -79,24 +81,10 @@ const Getsupport = (props: any) => {
 
   return (
     <div>
-      <div className="fixed top-0 w-full z-50">
-        <Navbar />
-      </div>
-      {connectionPanel ? <ConnectionPanel /> : ""}
-      {supportCard && (
+      {supportCard == true ? (
         <>
-          <div className="fixed top-14 left-0 right-0 bg-white z-10 shadow">
-            <div className="container mx-auto px-4">
-              <div className="flex justify-between pt-6 pb-4">
-                <h1 className="text-blue-900 text-2xl">Departments/fields</h1>
-                <div className="hidden sm:inline">
-                  <Departmentfilter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="container mx-auto mt-16 px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
               {cardsData?.map((el: any, index: number) => (
                 <div key={index} className="w-full">
                   <SupportCard
@@ -109,8 +97,9 @@ const Getsupport = (props: any) => {
               ))}
             </div>
           </div>
-
         </>
+      ) : (
+        <>{connectionPanel === "Ai" ? <AIMode /> : <HumanMode />}</>
       )}
     </div>
   );

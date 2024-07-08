@@ -20,6 +20,7 @@ import DashboardMainpage from "@/components/DashboardMainPage/DashboardMainpage"
 import Navbar from "@/components/DashboardNavbar/Navbar";
 import ExpertsList from "@/components/ExpertsList/ExpertsList";
 import SellService from "@/components/SellService/SellService";
+import Getsupport from "@/components/GetSupport/GetSupport";
 
 const Dashboard = () => {
   const [menuOpen, setMenuOpen] = useState(true); // Default menu state is open
@@ -60,6 +61,17 @@ const Dashboard = () => {
             onClick={() => handleOptionClick("Dashboard")}
           >
             <FiHome className="mr-2" /> Dashboard
+          </li>
+
+          <li
+            className={`flex items-center py-2 px-6 cursor-pointer ${
+              selectedOption === "Live Services"
+                ? "bg-blue-200 text-blue-800"
+                : "text-gray-700 hover:bg-gray-200"
+            }`}
+            onClick={() => handleOptionClick("Live Services")}
+          >
+            <FiHeart className="mr-2" /> Live Services
           </li>
           <li
             className={`flex items-center py-2 px-6 cursor-pointer ${
@@ -111,7 +123,7 @@ const Dashboard = () => {
           >
             <FiBriefcase className="mr-2" /> Sell Your Services
           </li>
-          <li
+          {/* <li
             className={`flex items-center py-2 px-6 cursor-pointer ${
               selectedOption === "Option 5"
                 ? "bg-blue-200 text-blue-800"
@@ -120,8 +132,8 @@ const Dashboard = () => {
             onClick={() => handleOptionClick("Option 5")}
           >
             <FiBookOpen className="mr-2" /> Ekathrass Learning
-          </li>
-          <li
+          </li> */}
+          {/* <li
             className={`flex items-center py-2 px-6 cursor-pointer ${
               selectedOption === "Option 6"
                 ? "bg-blue-200 text-blue-800"
@@ -130,8 +142,8 @@ const Dashboard = () => {
             onClick={() => handleOptionClick("Option 6")}
           >
             <FiDollarSign className="mr-2" /> Finance
-          </li>
-          <li
+          </li> */}
+          {/* <li
             className={`flex items-center py-2 px-6 cursor-pointer ${
               selectedOption === "Option 7"
                 ? "bg-blue-200 text-blue-800"
@@ -140,8 +152,8 @@ const Dashboard = () => {
             onClick={() => handleOptionClick("Option 7")}
           >
             <FiBarChart2 className="mr-2" /> Technology News
-          </li>
-          <li
+          </li> */}
+          {/* <li
             className={`flex items-center py-2 px-6 cursor-pointer ${
               selectedOption === "Option 8"
                 ? "bg-blue-200 text-blue-800"
@@ -150,7 +162,7 @@ const Dashboard = () => {
             onClick={() => handleOptionClick("Option 8")}
           >
             <FiHeart className="mr-2" /> Health & Wealth
-          </li>
+          </li> */}
           <li
             className={`flex items-center py-2 px-6 cursor-pointer ${
               selectedOption === "Profile Settings"
@@ -186,6 +198,7 @@ const Dashboard = () => {
           )}
           {selectedOption === "Experts List" && <ExpertsList />}
           {selectedOption === "Sell" && <SellService />}
+          {selectedOption === "Live Services" && <Getsupport />}
           {/* Add more content sections as needed */}
         </div>
       </div>

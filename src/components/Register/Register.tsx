@@ -54,9 +54,10 @@ const Register = (props: any) => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-2xl mx-auto">
+    <div className="bg-white sm:my-12 p-6 rounded-lg shadow-md w-full max-w-2xl mx-auto">
       <h2 className="text-xl font-semibold mb-4 text-center">
-        Sign <span className="text-white bg-blue-900 py-1 px-2 rounded">Up</span>
+        Sign{" "}
+        <span className="text-white bg-blue-900 py-1 px-2 rounded">Up</span>
       </h2>
       <form
         onSubmit={handleSubmit}

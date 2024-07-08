@@ -22,7 +22,7 @@ const ForgetPassword = (props: any) => {
 
   return (
     // <div className="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex justify-center items-center">
-    <div className="bg-white p-8 rounded-lg shadow-md w-100">
+    <div className="bg-white sm:my-12 p-8 rounded-lg shadow-md w-100">
       <h2 className="text-2xl font-semibold mb-4 text-center">
         Forgot Password
       </h2>
@@ -83,7 +83,7 @@ const ForgetPassword = (props: any) => {
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white rounded-md py-2 hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+          className="w-full bg-blue-900 text-white rounded-md py-2 hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
         >
           Submit
         </button>
@@ -91,14 +91,14 @@ const ForgetPassword = (props: any) => {
       <div className="text-center mt-4">
         <button
           onClick={handleCreateAccount}
-          className="text-sm me-4 text-blue-500 hover:underline bg-transparent border-none cursor-pointer"
+          className="text-sm me-4 text-blue-900 hover:underline bg-transparent border-none cursor-pointer"
         >
           Create an Account?
         </button>
 
         <button
           onClick={handleLogin}
-          className="text-sm text-blue-500 hover:underline bg-transparent border-none cursor-pointer"
+          className="text-sm text-blue-900 hover:underline bg-transparent border-none cursor-pointer"
         >
           Login?
         </button>
