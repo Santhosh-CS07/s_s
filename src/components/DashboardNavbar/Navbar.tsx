@@ -20,7 +20,7 @@ const Navbar = (props: any) => {
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         {/* Brand Logo */}
         <div className="flex items-center">
-          <h2 className="text-4xl">
+          <h2 className="text-4xl text-blue-900">
             ekathra{" "}
             <span className="text-white bg-blue-900 py-0 px-2 rounded">ss</span>
           </h2>
@@ -100,9 +100,8 @@ const Navbar = (props: any) => {
 
       {/* Mobile Menu Items */}
       <div
-        className={`container mx-auto px-4 py-2 sm:hidden ${
-          menuOpen ? "block" : "hidden"
-        }`}
+        className={`container mx-auto px-4 py-2 sm:hidden ${menuOpen ? "block" : "hidden"
+          }`}
       >
         <div className="flex flex-col space-y-2">
           <a

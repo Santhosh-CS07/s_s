@@ -38,6 +38,29 @@ const AIMode = () => {
     }
   };
 
+  // Function to parse AI message and format it with proper line breaks, paragraphs, and headers
+  const parseAiMessage = (message: any) => {
+    // Split the message into paragraphs based on double newlines
+    const paragraphs = message.split('\n\n');
+
+    // Render paragraphs with headers and plain text
+    return paragraphs.map((paragraph: any, index: any) => {
+      // Check if the paragraph starts with a header pattern (##, ###, etc.)
+      if (/^#+\s/.test(paragraph)) {
+        const headerLevel = paragraph.match(/^#+/)[0].length; // Determine header level
+        const headerText = paragraph.replace(/^#+\s/, ''); // Extract header text
+        return React.createElement(`h${headerLevel}`, { key: index, className: 'font-bold text-lg mb-2' }, headerText);
+      } else {
+        // Remove ** for bold
+        paragraph = paragraph.replace(/\*\*/g, '');
+        // Remove * for italic
+        paragraph = paragraph.replace(/\*/g, '');
+        return <p key={index} className="mb-2">{paragraph}</p>;
+      }
+    });
+  };
+
+
   return (
     <div className="flex h-[77vh] flex-col p-4">
       <div className="flex-grow overflow-y-auto p-4 bg-gray-100 rounded-lg shadow-inner">
@@ -50,14 +73,15 @@ const AIMode = () => {
           chat.map((chatItem, index) => (
             <div
               key={index}
-              className={`mb-2 p-2 rounded-lg ${
-                chatItem.sender === "user"
-                  ? "bg-blue-100 self-end"
-                  : "bg-gray-200 self-start"
-              }`}
+              className={`mb-2 p-2 rounded-lg ${chatItem.sender === "user"
+                ? "bg-blue-100 self-end"
+                : "bg-gray-200 self-start"
+                }`}
             >
-              {chatItem.message}
+              {/* Parse and display AI message */}
+              {parseAiMessage(chatItem.message)}
             </div>
+
           ))
         )}
         {loading && (

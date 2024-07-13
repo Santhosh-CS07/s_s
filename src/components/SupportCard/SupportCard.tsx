@@ -1,13 +1,8 @@
+"use client";
 import React from "react";
-import {
-  FaCheckCircle,
-  FaTimesCircle,
-  FaBookmark,
-  FaRegBookmark,
-} from "react-icons/fa";
 
 const SupportCard = (props: any) => {
-  const { setConnectionPanel, setSupportCard, data, setGetSupport } = props;
+  const { setConnectionPanel, setSupportCard, data } = props;
 
   const openConnectionPanel = (props: any) => {
     if (props === "Ai") {
@@ -29,28 +24,26 @@ const SupportCard = (props: any) => {
               {data?.profession}
             </span>
           </p>
+          {/* {data?.content?.type === "video" && (
+            <div className="mt-2">
+              <video controls className="w-full">
+                <source src={data?.content?.url} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          )}
+          {data?.content?.type === "image" && (
+            <div className="mt-2">
+              <img src={data?.content?.url} alt="Content" className="w-full rounded-lg" />
+            </div>
+          )}
+          {data?.content?.type === "text" && (
+            <p className="mt-2 text-sm text-gray-600">{data?.content?.text}</p>
+          )} */}
         </div>
       </div>
       <div className="flex items-center justify-between mb-2">
-        {data?.isVerified ? (
-          <p className="flex text-blue-500 font-bold text-sm">
-            <FaCheckCircle className="text-green-500 me-2 mt-1" />
-            <span> Verified</span>
-          </p>
-        ) : (
-          <p className="flex text-blue-500 font-bold text-red-500 text-sm">
-            <FaTimesCircle className="text-red-500 me-2 mt-1" />
-            <span> Not Verified</span>
-          </p>
-        )}
-        <span className="text-yellow-500 text-sm">{data?.rating}⭐</span>
-        <p
-          className={`text-xs font-bold ${
-            data?.liveStatus
-              ? "bg-green-100 text-green-800 px-2 py-1 rounded-full"
-              : "bg-red-100 text-red-800 px-2 py-1 rounded-full"
-          }`}
-        >
+        <p className={`text-xs font-bold ${data?.liveStatus ? "text-green-800" : "text-red-800"} px-2 py-1 rounded-full`}>
           {data?.liveStatus ? "Live Now" : "Offline"}
         </p>
       </div>
@@ -59,7 +52,7 @@ const SupportCard = (props: any) => {
           onClick={() => {
             openConnectionPanel("Ai");
           }}
-          className="bg-gary-500 text-blue-900 font-bold py-1 px-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 text-sm"
+          className="text-blue-900 font-bold py-1 px-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 text-sm"
         >
           Ask AI
         </button>
@@ -69,10 +62,11 @@ const SupportCard = (props: any) => {
           }}
           className="bg-blue-900 text-white font-bold py-1 px-2 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 text-sm"
         >
-          Ask Human
+          Ask Expert
         </button>
       </div>
     </div>
+
   );
 };
 

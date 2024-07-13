@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <div className="py-0 px-6 sm:px-10">
       <div className="flex flex-col sm:flex-row justify-center items-center">
-        <div className="">
+        <div className="font-serif">
           <h1 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-6">
             Join Ekathra COMMUNITY for Real-Time Help at Right time.
           </h1>
@@ -14,11 +14,11 @@ export default function HeroSection() {
             Every Human is a unique creature - Learn from them.
           </p>
           <div className="flex items-center space-x-4 p-4">
-            <FaHandshake className="text-green-500 animate-pulse" size={40} />
-            <h1 className="text-2xl font-bold text-gray-800 animate-pulse">
+            <FaHandshake className="text-blue-900 animate-pulse" size={40} />
+            <h1 className="font-serif text-3xl font-bold text-green-800 animate-pulse">
               I need help && you need help
             </h1>
-            <FaHandshake className="text-green-500 animate-pulse" size={40} />
+            <FaHandshake className="text-blue-900 animate-pulse" size={40} />
           </div>
           {/* <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6">
             <div className="flex-1 flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-light-blue-500">

@@ -19,8 +19,8 @@ const Homenavbar = () => {
     <div className="flex justify-between items-center py-4 px-6 sm:px-10">
       {/* Brand name */}
       <a href="/" className="mb-4 sm:mb-0">
-        <div className="flex items-center">
-          <h2 className="text-4xl">
+        <div className="font-serif flex items-center">
+          <h2 className=" text-4xl text-blue-900">
             ekathra{" "}
             <span className="text-white bg-blue-900 py-0 px-2 rounded">ss</span>
           </h2>
@@ -55,9 +55,8 @@ const Homenavbar = () => {
 
         {/* Menu items absolute positioned */}
         <div
-          className={`absolute top-4 right-0 bg-white mt-2 p-2 rounded shadow-lg ${
-            isOpen ? "block" : "hidden"
-          }`}
+          className={`absolute top-4 right-0 bg-white mt-2 p-2 rounded shadow-lg ${isOpen ? "block" : "hidden"
+            }`}
         >
           <a
             href="/"
