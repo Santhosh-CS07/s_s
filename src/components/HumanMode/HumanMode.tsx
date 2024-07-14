@@ -42,11 +42,10 @@ const HumanMode = () => {
                 chat.map((chatItem: any, index: any) => (
                   <div
                     key={index}
-                    className={`mb-2 p-2 rounded-md ${
-                      chatItem.sender === "user"
-                        ? "bg-blue-100 self-end"
-                        : "bg-gray-100 self-start"
-                    }`}
+                    className={`mb-2 p-2 rounded-md ${chatItem.sender === "user"
+                      ? "bg-blue-100 self-end"
+                      : "bg-gray-100 self-start"
+                      }`}
                   >
                     {chatItem.message}
                   </div>
@@ -80,9 +79,9 @@ const HumanMode = () => {
         );
       case "video":
         return (
-          <div className="flex items-center justify-center h-full text-gray-500">
+          <div className="flex items-center justify-center h-full mt-36 text-gray-500">
             <FaVideo className="text-4xl mb-4" />
-            <p>Video Call Interface (Coming Soon)</p>
+            {/* <p>Video Call Interface (Coming Soon)</p> */}
           </div>
         );
       default:
@@ -96,16 +95,15 @@ const HumanMode = () => {
         <div className="flex mb-4 space-x-4">
           <button
             onClick={() => setActiveTab("chat")}
-            className={`flex items-center px-4 py-2 rounded-md ${
-              activeTab === "chat"
-                ? "bg-blue-900 text-white"
-                : "bg-gray-200 text-gray-600"
-            }`}
+            className={`flex items-center px-4 py-2 rounded-md ${activeTab === "chat"
+              ? "bg-blue-900 text-white"
+              : "bg-gray-200 text-gray-600"
+              }`}
           >
             <FaRegComments className="mr-2" />
             Chat
           </button>
-          <button
+          {/* <button
             onClick={() => setActiveTab("audio")}
             className={`flex items-center px-4 py-2 rounded-md ${
               activeTab === "audio"
@@ -115,17 +113,16 @@ const HumanMode = () => {
           >
             <FaPhone className="mr-2" />
             Audio Call
-          </button>
+          </button> */}
           <button
             onClick={() => setActiveTab("video")}
-            className={`flex items-center px-4 py-2 rounded-md ${
-              activeTab === "video"
-                ? "bg-blue-900 text-white"
-                : "bg-gray-200 text-gray-600"
-            }`}
+            className={`flex items-center px-4 py-2 rounded-md ${activeTab === "video"
+              ? "bg-blue-900 text-white"
+              : "bg-gray-200 text-gray-600"
+              }`}
           >
             <FaVideo className="mr-2" />
-            Video Call
+            Live Call
           </button>
         </div>
         {renderContent()}

@@ -20,7 +20,7 @@ const DashboardMainpage = (props: any) => {
       },
       buttonText: "Live Support",
       buttonLink: "/dashboard/livehelp",
-      option: "Experts List",
+      option: "Live Services",
     },
     {
       title: "Transform Expertise into Revenue",
