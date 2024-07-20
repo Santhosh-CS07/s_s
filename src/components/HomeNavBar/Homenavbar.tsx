@@ -55,8 +55,9 @@ const Homenavbar = () => {
 
         {/* Menu items absolute positioned */}
         <div
-          className={`absolute top-4 right-0 bg-white mt-2 p-2 rounded shadow-lg ${isOpen ? "block" : "hidden"
-            }`}
+          className={`absolute top-4 right-0 bg-white mt-2 p-2 rounded shadow-lg ${
+            isOpen ? "block" : "hidden"
+          }`}
         >
           <a
             href="/"
@@ -65,19 +66,19 @@ const Homenavbar = () => {
             <HomeIcon className="h-6 w-6" />
             <span>Home</span>
           </a>
-          <a
+          {/* <a
             href="/people"
             className="hover:text-blue-900 flex items-center mb-2 space-x-2"
           >
             <UserPlusIcon className="h-6 w-6" />
             <span>People</span>
-          </a>
+          </a> */}
           <a
-            href="/articles"
+            href="/full-stack-demo-register"
             className="hover:text-blue-900 flex items-center mb-2 space-x-2"
           >
             <NewspaperIcon className="h-6 w-6" />
-            <span>Articles</span>
+            <span>full-stack-demo-register</span>
           </a>
           <a
             href="/happy-stories"
@@ -102,19 +103,19 @@ const Homenavbar = () => {
           <HomeIcon className="h-6 w-6" />
           <span>Home</span>
         </a>
-        <a
+        {/* <a
           href="/people"
           className="hover:text-blue-900 flex items-center space-x-2"
         >
           <UserPlusIcon className="h-6 w-6" />
           <span>People</span>
-        </a>
+        </a> */}
         <a
-          href="/articles"
+          href="/full-stack-demo-register"
           className="hover:text-blue-900 flex items-center space-x-2"
         >
           <NewspaperIcon className="h-6 w-6" />
-          <span>Articles</span>
+          <span>full-stack-demo-register</span>
         </a>
         <a
           href="/happy-stories"

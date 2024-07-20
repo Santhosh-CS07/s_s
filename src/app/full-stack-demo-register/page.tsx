@@ -143,12 +143,14 @@ const LandingPage: React.FC = () => {
               Limited Time Offer:
             </span>
             <span className="line-through text-gray-500"> 1999/-</span>
-            <span className="text-4xl font-bold text-green-600 animate-collapse-and-join">
-              Free Now!
-            </span>
           </p>
+          <div className="flex items-center justify-center">
+            <div className="text-4xl font-bold text-green-600 animate-collapse-and-join whitespace-nowrap inline-block">
+              Free Now!
+            </div>
+          </div>
 
-          <h2 className="text-2xl font-semibold text-center mb-2">
+          <h2 className="text-2xl font-semibold text-center my-2">
             What You will Learn
           </h2>
           <ul className="list-disc list-inside mb-6 text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl">
