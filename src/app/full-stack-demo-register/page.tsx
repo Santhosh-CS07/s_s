@@ -121,15 +121,18 @@ const LandingPage: React.FC = () => {
         </div>
       ) : (
         <div className="max-w-3xl bg-white rounded-lg shadow-xl p-8">
-          <h1 className="text-4xl font-bold text-center mb-4">
-            Welcome to Our{" "}
-            <span className="text-white bg-blue-900 py-0 px-2 rounded">
+          <div className="text-center mb-4 px-4 sm:px-6 md:px-8">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-normal mb-2">
+              Welcome to Our
+            </h1>
+            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-blue-900 mt-2 py-2 px-6 rounded whitespace-nowrap inline-block">
               Free 3-Days
-            </span>
-          </h1>
-          <h3 className="text-4xl font-bold text-center mb-4">
-            Software Training!
-          </h3>
+            </h1>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4">
+              Software Training!
+            </h3>
+          </div>
+
           <p className="text-center mb-4 text-gray-700">
             Dive deep into <strong> software development</strong>,{" "}
             <strong>AI/ML integration</strong>, and explore various programming
@@ -148,14 +151,18 @@ const LandingPage: React.FC = () => {
           <h2 className="text-2xl font-semibold text-center mb-2">
             What You will Learn
           </h2>
-          <ul className="list-disc list-inside mb-6 text-gray-700">
-            <li>Introduction to Software Development</li>
-            <li>Understanding Front-end and Back-end Technologies</li>
-            <li>Basics of Full Stack Development</li>
-            <li>Integration of AI/ML with Software</li>
-            <li>Programming Languages: TypeScript, Python, Java, etc.</li>
-            <li>Building Your First Application</li>
-            <li>Career Paths in Technology</li>
+          <ul className="list-disc list-inside mb-6 text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl">
+            <li className="mb-2">Introduction to Software Development</li>
+            <li className="mb-2">
+              Understanding Front-end and Back-end Technologies
+            </li>
+            <li className="mb-2">Basics of Full Stack Development</li>
+            <li className="mb-2">Integration of AI/ML with Software</li>
+            <li className="mb-2">
+              Programming Languages: TypeScript, Python, Java, etc.
+            </li>
+            <li className="mb-2">Building Your First Application</li>
+            <li className="mb-2">Career Paths in Technology</li>
           </ul>
 
           <form className="space-y-4" onSubmit={handleSubmit}>
