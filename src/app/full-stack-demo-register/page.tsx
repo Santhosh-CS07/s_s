@@ -146,7 +146,7 @@ const LandingPage: React.FC = () => {
           </p>
 
           <h2 className="text-2xl font-semibold text-center mb-2">
-            What You'll Learn
+            What You will Learn
           </h2>
           <ul className="list-disc list-inside mb-6 text-gray-700">
             <li>Introduction to Software Development</li>
