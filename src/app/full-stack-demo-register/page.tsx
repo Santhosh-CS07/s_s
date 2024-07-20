@@ -90,7 +90,7 @@ const LandingPage: React.FC = () => {
 
           <div className="flex justify-center mb-6">
             <a
-              href="https://api.whatsapp.com/send?text=Check%20out%20this%20free%203-days%20software%20training%20opportunity%20from%20[YourCompanyName]!%20We%20just%20registered%20and%20it%20looks%20great!%20https://example.com"
+              href="https://api.whatsapp.com/send?text=Check%20out%20this%20free%203-days%20software%20training%20opportunity%20from%20ekathrass.com!%20We%20just%20registered%20and%20it%20looks%20great!%20https://www.ekathrass.com/full-stack-demo-register"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center py-2 px-4 bg-green-500 text-white font-semibold rounded-md shadow-sm hover:bg-green-600 transition duration-300"
