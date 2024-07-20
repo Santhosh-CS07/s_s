@@ -1,0 +1,19 @@
+
+@keyframes collapseAndJoin {
+    0% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+    50% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+
+  .animate-collapse-and-join {
+    animation: collapseAndJoin 4s infinite;
+  }

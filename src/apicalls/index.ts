@@ -7,7 +7,8 @@ const apiUrl = 'https://s-s-backend.vercel.app';
 
 const endpoints = {
     createUser: `${apiUrl}/v1/users`,
-    getUser: `${apiUrl}/v1/users/find`
+    getUser: `${apiUrl}/v1/users/find`,
+    createDemoUsers: `${apiUrl}/v1/demoUser`
     // Add more endpoints here as needed
 };
 
