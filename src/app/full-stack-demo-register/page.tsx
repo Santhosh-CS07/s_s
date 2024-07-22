@@ -125,46 +125,83 @@ const LandingPage: React.FC = () => {
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-normal mb-2">
               Welcome to Our
             </h1>
-            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-blue-900 mt-2 py-2 px-6 rounded whitespace-nowrap inline-block">
-              Free 3-Days
+            <h1 className="text-white text-2xl sm:text-3xl md:text-3xl lg:text-4xl bg-blue-900 mt-2 py-2 px-6 rounded whitespace-nowrap inline-block">
+              Free 3-Days Workshop
             </h1>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4">
-              Software Training!
+            <h3 className="text-3xl font-bold mt-4">
+              <span className="text-green-600 underline">Understanding</span>{" "}
+              Software Technology
             </h3>
           </div>
-
-          <p className="text-center mb-4 text-gray-700">
-            Dive deep into <strong> software development</strong>,{" "}
-            <strong>AI/ML integration</strong>, and explore various programming
-            languages.
-          </p>
-          <p className="text-center mb-6 text-gray-700">
+          <p className="text-center mb-2 text-gray-700">
             <span className="text-lg font-semibold text-red-600">
               Limited Time Offer:
             </span>
             <span className="line-through text-gray-500"> 1999/-</span>
           </p>
           <div className="flex items-center justify-center">
-            <div className="text-4xl font-bold text-green-600 animate-collapse-and-join whitespace-nowrap inline-block">
+            <div className="text-4xl font-bold bg-yellow-400 text-blue-900 px-6 py-2 mb-2 rounded animate-collapse-and-join whitespace-nowrap inline-block">
               Free Now!
             </div>
           </div>
+          <p className="text-center mb-4 text-gray-700">
+            Dive deep into <strong> software development</strong>,{" "}
+            <strong>AI/ML integration</strong>, and explore various programming
+            languages.
+          </p>
 
           <h2 className="text-2xl font-semibold text-center my-2">
             What You will Learn
           </h2>
           <ul className="list-disc list-inside mb-6 text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl">
-            <li className="mb-2">Introduction to Software Development</li>
             <li className="mb-2">
-              Understanding Front-end and Back-end Technologies
+              Introduction to{" "}
+              <span className="bg-blue-900 mt-2 py-1 px-4 rounded text-white whitespace-nowrap">
+                Software
+              </span>{" "}
+              Development
             </li>
-            <li className="mb-2">Basics of Full Stack Development</li>
-            <li className="mb-2">Integration of AI/ML with Software</li>
             <li className="mb-2">
-              Programming Languages: TypeScript, Python, Java, etc.
+              Understanding Front-end and Back-end{" "}
+              <span className="bg-blue-900 mt-2 py-1 px-4 rounded text-white whitespace-nowrap">
+                Technologies
+              </span>
             </li>
-            <li className="mb-2">Building Your First Application</li>
-            <li className="mb-2">Career Paths in Technology</li>
+            <li className="mb-2">
+              Basics of{" "}
+              <span className="bg-blue-900 mt-2 py-1 px-4 rounded text-white whitespace-nowrap">
+                Full Stack
+              </span>{" "}
+              Development
+            </li>
+            <li className="mb-2">
+              Integration of{" "}
+              <span className="bg-blue-900 mt-2 py-1 px-4 rounded text-white whitespace-nowrap">
+                {" "}
+                AI/ML
+              </span>{" "}
+              with Software
+            </li>
+            <li className="mb-2">
+              What is{" "}
+              <span className="bg-blue-900 mt-2 py-1 px-4 rounded text-white whitespace-nowrap">
+                Programming
+              </span>{" "}
+              Languages: TypeScript, Python, Java, etc.
+            </li>
+            <li className="mb-2">
+              How to Build Your First Application -{" "}
+              <span className="bg-blue-900 mt-2 py-1 px-4 rounded text-white whitespace-nowrap">
+                Real Time Project
+              </span>
+            </li>
+            <li className="mb-2">
+              What all are{" "}
+              <span className="bg-blue-900 mt-2 py-1 px-4 rounded text-white whitespace-nowrap">
+                Career Paths
+              </span>{" "}
+              in Technology
+            </li>
           </ul>
 
           <form className="space-y-4" onSubmit={handleSubmit}>
